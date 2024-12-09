@@ -28,7 +28,7 @@ function App() {
                 className="store-icon"
               />
             </a>
-            <a href="/games-privacy-policy.html" className="legal-link">Privacy Policy</a>
+            {/* <a href="/games-privacy-policy.html" className="legal-link">Privacy Policy</a> */}
           </div>
           <div className="download-group">
             <a 
@@ -43,7 +43,7 @@ function App() {
                 className="store-icon"
               />
             </a>
-            <a href="/games-terms-of-service.html" className="legal-link">Terms of Service</a>
+            {/* <a href="/games-terms-of-service.html" className="legal-link">Terms of Service</a> */}
           </div>
         </div>
       </div>
