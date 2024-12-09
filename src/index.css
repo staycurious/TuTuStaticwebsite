@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #01032F;
+  --secondary-color: #F0C600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #01032F;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* 在小屏幕上减少内边距 */
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  background: transparent;
+  /* 在小屏幕上减少上下内边距 */
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
+
+.game-icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  /* 在小屏幕上稍微缩小图标 */
+  @media (max-width: 768px) {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  /* 在小屏幕上减小字体大小 */
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  /* 在小屏幕上调整字体大小和间距 */
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.download-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  /* 在特小屏幕上改为垂直排列 */
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.download-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 第一个下载组（App Store）右对齐 */
+.download-group:first-child {
+  align-items: flex-end;
+}
+
+/* 第二个下载组（Google Play）左对齐 */
+.download-group:last-child {
+  align-items: flex-start;
+}
+
+.store-button {
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.store-button:hover {
+  opacity: 0.8;
+}
+
+.store-icon {
+  height: 48px;
+  width: auto;
+  /* 在小屏幕上稍微缩小按钮 */
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+}
+
+.legal-link {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.legal-link:hover {
+  opacity: 1;
+}
+
+.legal-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: var(--primary-color);
+}
+
+.legal-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.legal-content h2 {
+  color: var(--secondary-color);
+  margin: 2rem 0 1rem;
+}
+
+.legal-content p {
+  margin: 1rem 0;
+}
+
+.legal-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.legal-content li {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .legal-content {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  
+  .legal-links {
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
