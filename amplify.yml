@@ -15,4 +15,6 @@ frontend:
     - pattern: '/app-ads.txt'
       status: '200'
       target: '/app-ads.txt'
-      condition: 'null' 
+    - pattern: '/<*>'
+      status: '404'
+      target: '/index.html' 
