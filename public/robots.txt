@@ -1,2 +1,4 @@
-User-agent : *
-Allow: /app-ads.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://tutufungames.com/sitemap.xml
