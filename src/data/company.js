@@ -81,10 +81,8 @@ export const services = [
   },
 ]
 
-// Three games. Two live, one in development.
-// `coverWord` is what's shown as a large Limelight watermark on placeholder
-// covers; replace the cover image path under public/images/games/ when art
-// is ready.
+// Three games, all live. `coverWord` is the large Limelight watermark used
+// as a fallback when an icon isn't set; the actual rendered cards use `icon`.
 export const games = [
   {
     slug: 'enso-block',
@@ -139,7 +137,7 @@ export const games = [
     slug: 'lumitris',
     title: 'Lumitris',
     coverWord: 'LUMITRIS',
-    status: 'Coming soon',
+    status: 'Available',
     year: '2026',
     genre: 'Puzzle',
     platforms: ['iOS', 'Android'],
