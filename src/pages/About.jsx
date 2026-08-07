@@ -168,7 +168,7 @@ export default function About() {
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {games.map((g, i) => {
             const Wrapper = g.appStore ? 'a' : Link
             const wrapperProps = g.appStore

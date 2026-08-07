@@ -42,10 +42,10 @@ public/
 
 ## Pages
 
-- `/` Home — hero, services, selected work (2 live games), philosophy, CTA
-- `/about` — capability metrics, services overview, all 3 games, advantages, timeline
+- `/` Home — hero, services, selected work (all live games), philosophy, CTA
+- `/about` — capability metrics, services overview, all 4 games, advantages, timeline
 - `/services` — 4 service practices with capabilities
-- `/games` — full title list (Enso Block, Number Cross, Lumitris)
+- `/games` — full title list (Noctagram, Enso Block, Number Cross, Lumitris)
 - `/join-us` — vision + criteria, no specific roles
 - `/contact` — direct emails + form
 
@@ -56,7 +56,7 @@ Open `src/data/company.js` and verify / update:
 - [ ] `address` — currently `155 Queen St, Charlottetown, PE C1A 4B4`
 - [ ] `business` and `hi` email addresses are set up and forwarding
 - [ ] `metrics` — confirm `10+`, `Millions`, `Dozens` are accurate to use
-- [ ] `games[].appStore` links — currently set for Enso Block and Number Cross
+- [ ] `games[].appStore` links — set for all four live titles
 - [ ] Drop real cover images into `public/images/games/` and reference via `games[].cover`
 
 In `src/pages/Contact.jsx`, replace `FORMSPREE_ENDPOINT` with the endpoint from your free Formspree account: <https://formspree.io>

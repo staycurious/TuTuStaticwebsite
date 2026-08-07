@@ -10,7 +10,7 @@ export default function Games() {
     <>
       <Seo
         title="Games"
-        description="Original mobile titles from TuTu Fun Games — Enso Block, Number Cross, and Lumitris."
+        description="Original mobile titles from TuTu Fun Games — Noctagram, Enso Block, Number Cross, and Lumitris."
       />
 
       <section className="container-x pt-12 md:pt-20 pb-16 relative overflow-hidden">

@@ -160,7 +160,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {featured.map((g, i) => {
               const Wrapper = g.appStore ? 'a' : Link
               const wrapperProps = g.appStore
@@ -176,7 +176,7 @@ export default function Home() {
                   aria-label={g.appStore ? `${g.title} on the App Store` : g.title}
                 >
                   <div className={`aspect-[4/5] ${t.cardBg} rounded-sm overflow-hidden relative transition-transform duration-700 group-hover:-translate-y-2 border-2 ${t.cardBorder}`}>
-                    <div className="absolute inset-0 grid place-items-center p-10 md:p-14">
+                    <div className="absolute inset-0 grid place-items-center p-8 md:p-10">
                       {g.icon ? (
                         <img
                           src={g.icon}

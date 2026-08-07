@@ -81,9 +81,34 @@ export const services = [
   },
 ]
 
-// Three games, all live. `coverWord` is the large Limelight watermark used
+// Four games, all live. `coverWord` is the large Limelight watermark used
 // as a fallback when an icon isn't set; the actual rendered cards use `icon`.
 export const games = [
+  {
+    slug: 'noctagram',
+    title: 'Noctagram',
+    coverWord: 'NOCTAGRAM',
+    status: 'Available',
+    year: '2026',
+    genre: 'Nonogram / Puzzle',
+    platforms: ['iOS'],
+    summary:
+      'Picross beneath the night sky — every puzzle you solve becomes a constellation.',
+    description:
+      'A calm nonogram (picross) puzzle game set in a star-lit world. Each solved grid ignites into a named constellation and is sealed into a night sky that grows brighter the more you play — 248 hand-named puzzles, no timers, no lives.',
+    cover: '/images/games/noctagram-cover.jpg',
+    icon: '/images/games/noctagram-icon.png',
+    appStore:
+      'https://apps.apple.com/us/app/noctagram-nonogram-puzzles/id6792143997',
+    playStore: '',
+    theme: {
+      cardBg: 'bg-[#101426]',
+      cardBorder: 'border-cream/20',
+      badge: 'bg-cream text-ink border-2 border-cream',
+      deco: 'text-cream/15',
+      iconRing: 'ring-cream/10',
+    },
+  },
   {
     slug: 'enso-block',
     title: 'Enso Block',
@@ -181,7 +206,7 @@ export const milestones = [
   {
     year: '2026',
     label:
-      'Enso Block and Lumitris released; more puzzle games in active development.',
+      'Enso Block, Lumitris, and Noctagram released; more puzzle games in active development.',
   },
 ]
 
