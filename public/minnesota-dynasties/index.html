@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>明尼苏达商业世家 · 控制权存续图 1865–2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oat:#E4E2D8; --oat-lift:#EFEEE6; --paper:#F6F5EF;
+  --pine:#1B211E; --pine-soft:#3D4642; --muted:#767B70;
+  --rule:#C6C4B7; --rule-faint:#D8D6CA;
+  --spruce:#2F5D50; --brass:#9E7218; --iron:#8A4032;
+  --serif:"Bodoni Moda",Georgia,serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --lane:186px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--oat);color:var(--pine);
+  font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.75;letter-spacing:.005em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+a{color:var(--spruce);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{border-bottom-color:var(--spruce)}
+a:focus-visible{outline:2px solid var(--spruce);outline-offset:2px}
+
+.mast{padding:72px 0 34px}
+.mast h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6.4vw,72px);
+  line-height:1.02;margin:0 0 2px;letter-spacing:-.015em}
+.mast .cn{font-family:var(--sans);font-weight:300;font-size:clamp(19px,2.6vw,26px);
+  line-height:1.3;color:var(--pine-soft);margin:0 0 26px}
+.lede{max-width:62ch;font-size:17px;color:var(--pine-soft);margin:0}
+.lede em{font-style:normal;border-bottom:1px solid var(--brass);padding-bottom:1px}
+
+.bar{display:flex;flex-wrap:wrap;gap:22px 30px;align-items:baseline;padding:22px 0 16px;
+  border-top:1px solid var(--pine);border-bottom:1px solid var(--rule);margin-top:38px}
+.key{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center}
+.key span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--pine-soft)}
+.key i{width:22px;height:8px;display:inline-block;border-radius:1px}
+.i-hold{background:var(--spruce)}
+.i-ceded{background:var(--brass)}
+.i-gone{background:var(--iron)}
+.i-after{background:repeating-linear-gradient(-45deg,var(--rule),var(--rule) 2px,transparent 2px,transparent 5px)}
+.i-pre{height:1px;background:repeating-linear-gradient(90deg,var(--muted),var(--muted) 2px,transparent 2px,transparent 5px)}
+.sorter{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+.sorter select{font-family:var(--sans);font-size:13.5px;color:var(--pine);background:var(--paper);
+  border:1px solid var(--rule);border-radius:2px;padding:5px 9px;cursor:pointer}
+.sorter select:focus-visible{outline:2px solid var(--spruce);outline-offset:2px}
+
+.chart{padding:26px 0 8px;position:relative}
+.hist{position:relative;height:48px;margin:0 0 4px var(--lane)}
+.histcap{position:absolute;left:calc(0px - var(--lane));bottom:-2px;width:calc(var(--lane) - 18px);
+  text-align:right;font-size:11.5px;color:var(--muted);line-height:1.45}
+.hbar{position:absolute;bottom:0;border:0;padding:0;cursor:pointer;background:var(--rule-faint);
+  border-bottom:1px solid var(--rule)}
+.hbar:hover{background:var(--rule)}
+.hbar.on{background:var(--spruce)}
+.hbar.zero{cursor:default;height:2px!important}
+.hbar b{position:absolute;top:-16px;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-size:11.5px;font-weight:500;color:var(--muted)}
+.hbar.on b{color:var(--spruce)}
+.hbar:focus-visible{outline:2px solid var(--spruce);outline-offset:1px}
+.crisisrow{position:relative;height:36px;margin-left:var(--lane)}
+.cmark{position:absolute;padding:0;border:0;background:none;cursor:pointer;
+  font-size:11.5px;color:var(--iron);white-space:nowrap;transform:translateX(-50%);
+  font-family:var(--sans);line-height:1.4}
+.cmark:hover{text-decoration:underline}
+.cmark:focus-visible{outline:2px solid var(--iron);outline-offset:2px}
+.cmark.r0{top:0}
+.cmark.r1{top:18px}
+.cl{position:absolute;top:0;bottom:0;width:1px;
+  background:repeating-linear-gradient(180deg,#8A4032,#8A4032 3px,transparent 3px,transparent 6px);
+  opacity:.45}
+.decnote{margin:10px 0 0;font-size:13px;color:var(--spruce)}
+.decnote button{font:inherit;color:var(--muted);background:none;border:0;
+  border-bottom:1px solid var(--rule);cursor:pointer;padding:0;margin-left:10px}
+.hint{margin:14px 0 0;font-size:13px;color:var(--muted)}
+.striphead{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;
+  margin:44px 0 0;padding-top:20px;border-top:1px solid var(--pine)}
+.striphead h2{font-family:var(--serif);font-weight:500;font-size:22px;margin:0}
+.striphead span{font-size:13px;color:var(--muted)}
+.strip{display:flex;gap:0;overflow-x:auto;overflow-y:hidden;margin:16px 0 0;
+  scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:14px}
+.strip::-webkit-scrollbar{height:6px}
+.strip::-webkit-scrollbar-track{background:var(--rule-faint)}
+.strip::-webkit-scrollbar-thumb{background:var(--rule)}
+.card{flex:0 0 224px;scroll-snap-align:start;text-align:left;cursor:pointer;
+  background:none;border:0;border-left:1px solid var(--rule);padding:16px 20px 16px 18px;
+  font-family:var(--sans);color:var(--pine);display:flex;flex-direction:column;gap:0}
+.card:first-child{border-left:0;padding-left:0}
+.card:hover{background:var(--oat-lift)}
+.card.on{background:var(--paper);box-shadow:inset 0 -3px 0 var(--pine)}
+.card:focus-visible{outline:2px solid var(--spruce);outline-offset:-2px}
+.c-yr{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1;color:var(--muted)}
+.card.on .c-yr{color:var(--pine)}
+.c-cn{font-size:15.5px;font-weight:500;margin-top:9px;line-height:1.35}
+.c-en{font-family:var(--serif);font-size:12.5px;color:var(--muted);margin-top:1px}
+.c-st{font-size:11.5px;margin-top:11px;padding:2px 8px;border-radius:2px;color:var(--paper);align-self:flex-start}
+.c-tag{font-size:12.5px;color:var(--pine-soft);margin-top:10px;line-height:1.55}
+.c-num{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+.c-num b{font-weight:500;color:var(--pine)}
+.axis{position:relative;height:22px;margin-left:var(--lane);border-bottom:1px solid var(--rule-faint)}
+.axis b{position:absolute;transform:translateX(-50%);font-family:var(--serif);font-weight:400;
+  font-size:13px;color:var(--muted);top:0}
+.axis u{position:absolute;top:18px;width:1px;height:5px;background:var(--rule);text-decoration:none}
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:var(--lane) 1fr;align-items:center;border-bottom:1px solid var(--rule-faint)}
+.row:last-child{border-bottom:0}
+.row .name{cursor:pointer}
+.row .name:focus-visible{outline:2px solid var(--spruce);outline-offset:-2px}
+.row .name{padding:11px 16px 11px 0;font-size:14.5px;line-height:1.35;display:flex;flex-direction:column;gap:1px}
+.row .name strong{font-weight:500}
+.row .name small{font-family:var(--serif);font-size:12.5px;color:var(--muted)}
+.row .track{position:relative;height:42px}
+.band{position:absolute;top:16px;height:9px;border-radius:1px}
+.band.hold{background:var(--spruce)}
+.band.ceded{background:var(--brass)}
+.band.gone{background:var(--iron)}
+.pre{position:absolute;top:20px;height:1px;
+  background:repeating-linear-gradient(90deg,var(--muted),var(--muted) 2px,transparent 2px,transparent 5px)}
+.tail{position:absolute;top:18px;height:5px;
+  background:repeating-linear-gradient(-45deg,var(--rule),var(--rule) 2px,transparent 2px,transparent 5px)}
+.hit{position:absolute;top:8px;width:24px;height:26px;margin-left:-12px;padding:0;border:0;
+  background:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.hit:focus{outline:none}
+.hit:focus-visible .dot{box-shadow:0 0 0 3px var(--oat),0 0 0 5px var(--spruce)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--paper);border:1.5px solid var(--pine);
+  pointer-events:none}
+.dot.multi{width:9px;height:9px;border-width:2px}
+.hit:hover .dot,.dot.hl{background:var(--brass);border-color:var(--brass);transform:scale(1.5)}
+
+.plot{position:absolute;left:var(--lane);right:0;top:0;bottom:0;pointer-events:none;overflow:hidden}
+.cross{position:absolute;top:0;bottom:0;width:1px;background:var(--rule);opacity:0}
+.cross.on{opacity:1}
+.crossyr{position:absolute;top:0;transform:translateX(-50%);font-family:var(--serif);font-size:12px;
+  color:var(--pine-soft);background:var(--oat);padding:0 5px;opacity:0;white-space:nowrap}
+.crossyr.on{opacity:1}
+
+.tip{position:absolute;z-index:5;max-width:320px;background:var(--pine);color:var(--paper);
+  padding:11px 14px;border-radius:3px;font-size:13px;line-height:1.6;opacity:0;pointer-events:none;
+  transform:translateY(-100%)}
+.tip.on{opacity:1}
+.tip .arw{position:absolute;bottom:-5px;width:10px;height:10px;background:var(--pine);
+  transform:translateX(-50%) rotate(45deg)}
+.tip p{margin:0}
+.tip p+p{margin-top:8px;padding-top:8px;border-top:1px solid rgba(246,245,239,.22)}
+.tip em{font-family:var(--serif);font-style:normal;color:#E8C36A;margin-right:8px;font-weight:500}
+.tip .who{display:block;font-size:11.5px;color:#9C9F96;margin-bottom:6px}
+.tip .note{color:#9C9F96;font-size:12px}
+.row:hover{background:var(--oat-lift)}
+.row.on{background:var(--oat-lift)}
+.row:hover .name strong,.row.on .name strong{color:var(--spruce)}
+.row.on .name strong{font-weight:700}
+.row:focus-within{outline:2px solid var(--spruce);outline-offset:-2px}
+.row.dim{opacity:.28}
+.geobtn{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  padding:0;border:0;background:none;cursor:pointer;vertical-align:middle;margin-left:1px}
+.geo{display:block;width:6px;height:6px;border-radius:50%;background:var(--brass);pointer-events:none}
+.geobtn:hover .geo{transform:scale(1.6)}
+.geobtn:focus{outline:none}
+.geobtn:focus-visible .geo{box-shadow:0 0 0 3px var(--oat),0 0 0 5px var(--brass)}
+
+.detail{background:var(--paper);border:1px solid var(--rule);border-top:3px solid var(--pine);
+  margin:34px 0 0;padding:34px 34px 30px}
+.detail .head{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;margin-bottom:4px}
+.detail h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,38px);margin:0;
+  letter-spacing:-.01em;line-height:1.1}
+.detail .tagline{font-size:15px;color:var(--muted)}
+.status{font-size:12.5px;padding:3px 10px;border-radius:2px;color:var(--paper);white-space:nowrap}
+.s-hold{background:var(--spruce)}
+.s-ceded{background:var(--brass)}
+.s-gone{background:var(--iron)}
+.where{margin:12px 0 0;font-size:13.5px;color:var(--muted)}
+.summary{max-width:66ch;margin:14px 0 26px;color:var(--pine-soft)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stat{padding:16px 20px 16px 0;border-right:1px solid var(--rule-faint)}
+.stat:last-child{border-right:0}
+.stat dt{font-size:12.5px;color:var(--muted);margin:0 0 3px}
+.stat dd{margin:0;font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.15}
+.stat dd s{display:block;font-family:var(--sans);font-size:12px;font-weight:400;color:var(--muted);
+  text-decoration:none;margin-top:5px;line-height:1.5}
+.cols{display:grid;grid-template-columns:1.35fr 1fr;gap:0 46px;margin-top:30px}
+.cols h3{font-size:14px;font-weight:500;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--pine)}
+.mile{list-style:none;margin:0;padding:0}
+.mile li{display:grid;grid-template-columns:58px 1fr;gap:14px;padding:9px 0;
+  border-bottom:1px solid var(--rule-faint);font-size:14.5px;line-height:1.6}
+.mile li:last-child{border-bottom:0}
+.mile li{cursor:default;border-left:2px solid transparent;padding-left:0;margin-left:0}
+.mile li.hl{background:var(--oat);border-left-color:var(--brass);padding-left:8px;margin-left:-10px}
+.mile em{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--brass);font-weight:500}
+.folk{list-style:none;margin:0;padding:0}
+.folk li{padding:9px 0;border-bottom:1px solid var(--rule-faint);font-size:14.5px;line-height:1.6}
+.folk li:last-child{border-bottom:0}
+.folk b{font-weight:500;display:block}
+.folk span{color:var(--muted);font-size:13.5px}
+.caveat{margin-top:26px;padding:14px 18px;background:var(--oat);border-left:3px solid var(--brass);
+  font-size:13.5px;color:var(--pine-soft);line-height:1.65}
+.refs{margin-top:22px;padding-top:16px;border-top:1px solid var(--rule)}
+.refs h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 10px;border:0;padding:0}
+.refs ol{margin:0;padding-left:20px;font-size:13.5px;line-height:1.75;color:var(--pine-soft)}
+.refs li{margin-bottom:3px}
+.refs .outlet{color:var(--muted)}
+
+section.prose{padding:64px 0 0}
+section.prose h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,3.2vw,34px);
+  margin:0 0 6px;letter-spacing:-.01em}
+section.prose p{max-width:66ch;color:var(--pine-soft)}
+.miss{list-style:none;margin:26px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:0 34px}
+.miss li{padding:16px 0;border-top:1px solid var(--rule)}
+.miss b{font-weight:500}
+.miss em{font-style:normal;font-family:var(--serif);color:var(--brass);margin-left:6px}
+.miss p{margin:5px 0 0;font-size:14px;line-height:1.65}
+.minor{margin-top:22px;font-size:14px;color:var(--muted);max-width:66ch}
+.notes{margin:22px 0 0;padding:0;list-style:none;max-width:70ch}
+.notes li{padding:11px 0;border-top:1px solid var(--rule-faint);font-size:14.5px;line-height:1.7;color:var(--pine-soft)}
+.geotable{width:100%;border-collapse:collapse;margin-top:24px;font-size:14.5px}
+.geotable th{text-align:left;font-weight:500;font-size:13px;color:var(--muted);
+  border-bottom:1px solid var(--pine);padding:0 14px 8px 0}
+.geotable td{padding:10px 14px 10px 0;border-bottom:1px solid var(--rule-faint);
+  vertical-align:top;line-height:1.6;color:var(--pine-soft)}
+.geotable td:first-child{color:var(--pine);white-space:nowrap}
+.srclist{margin:26px 0 0;padding:0;list-style:none;
+  columns:2;column-gap:40px}
+.srclist li{break-inside:avoid;padding:9px 0;border-top:1px solid var(--rule-faint);
+  font-size:13.5px;line-height:1.6}
+.srclist .outlet{display:block;color:var(--muted);font-size:12.5px}
+footer{margin:70px 0 0;padding:26px 0 60px;border-top:1px solid var(--pine);font-size:13px;color:var(--muted)}
+
+@media (max-width:800px){
+  :root{--lane:128px}
+  .wrap{padding:0 20px}
+  .mast{padding:48px 0 26px}
+  .detail{padding:26px 22px 24px}
+  .cols{grid-template-columns:1fr;gap:34px}
+  .row .name{font-size:13px;padding-right:10px}
+  .sorter{margin-left:0;width:100%}
+  .stat{border-right:0;border-bottom:1px solid var(--rule-faint)}
+  .srclist{columns:1}
+}
+@media (prefers-reduced-motion:no-preference){
+  .row,.row .name strong{transition:background .12s ease,color .12s ease}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <h1>Minnesota Dynasties</h1>
+  <p class="cn">明尼苏达商业世家 · 一张控制权存续图</p>
+  <p class="lede">同一份州内富豪榜上，起点相差一百年的家族被并排比较，这会掩盖唯一重要的差异：<em>谁还握着公司</em>。下面这张图按年份铺开十九个家族——实线是家族仍在控制的年份，斜纹是控制权让出之后企业仍存续的年份。点任意一行看细节、时间线、人物与该条目的出处。</p>
+</header>
+
+<div class="bar">
+  <div class="key">
+    <span><i class="i-hold"></i>家族仍控制企业</span>
+    <span><i class="i-ceded"></i>控制权已让出</span>
+    <span><i class="i-gone"></i>家族已出局或企业解体</span>
+    <span><i class="i-after"></i>易主后企业仍存续</span>
+    <span><i class="i-pre"></i>创办前的铺垫</span>
+  </div>
+  <label class="sorter">排序
+    <select id="sort">
+      <option value="year">按创办年份</option>
+      <option value="status">按控制权状态</option>
+      <option value="name">按家族名</option>
+    </select>
+  </label>
+  <label class="sorter">筛选
+    <select id="filter">
+      <option value="all">全部十九家</option>
+      <option value="hold">仅看仍控制的</option>
+      <option value="ceded">仅看已让出的</option>
+      <option value="gone">仅看已出局的</option>
+      <option value="video">视频清单的十家</option>
+      <option value="missing">视频漏掉的九家</option>
+      <option value="partial">地理归属存疑的六家</option>
+    </select>
+  </label>
+</div>
+
+<div class="chart" id="chart">
+  <div class="hist" id="hist"><span class="histcap">每十年新创办<br>的家族企业数</span></div>
+  <div class="crisisrow" id="crisisrow"></div>
+  <div class="axis" id="axis"></div>
+  <ul class="rows" id="rows"></ul>
+  <div class="plot" id="plot"><span class="cross" id="cross"></span></div>
+  <span class="crossyr" id="crossyr"></span>
+  <div class="tip" id="tip" role="tooltip"></div>
+</div>
+<p class="decnote" id="decnote" hidden></p>
+<p class="hint">直方图每一格是一个十年，点一下只看那十年创办的家族；虚线是全国性经济冲击。把光标移到节点上看事件，点击任意节点会跳到该家族的对应条目；家族名后的琥珀色圆点表示地理归属存疑，点开看说明。触屏点一下即可。</p>
+
+<div class="striphead">
+  <h2>十九家一览</h2>
+  <span id="striphint">横向滚动查看全部；点家族名跳到下方详情</span>
+</div>
+<div class="strip" id="strip" role="tablist" aria-label="家族一览"></div>
+
+<article class="detail" id="detail" aria-live="polite"></article>
+
+<section class="prose">
+  <h2>这些家族全都来自明尼苏达吗</h2>
+  <p>不是。十九家里有十三家从创办到今天都在明州，另外六家的归属需要打折扣——有的公司创办于别州，有的创办人只是把明州当作居住地，有的当事人早已迁出。名字后面带琥珀色圆点的就是这六家。</p>
+  <table class="geotable">
+    <thead><tr><th>家族</th><th>实际情况</th></tr></thead>
+    <tbody id="geobody"></tbody>
+  </table>
+  <p class="minor">另外三位在世或近年在世的当事人不住在明州：Richard Schulze 现居佛罗里达，Pauline MacMillan Keinath 居密苏里，Dwight Opperman 生前主要居住地是加州比佛利山。这也是为什么 Forbes 的“明尼苏达富豪榜”每年只有三到五人上榜——它统计的是居住地，不是财富的形成地。</p>
+</section>
+
+<section class="prose">
+  <h2>视频清单漏掉了什么</h2>
+  <p>那份十强榜是一份当下可见财富清单，两类家族被系统性漏掉：一类是财富形成于 1900 年前、后来把资产变成基金会或迁出本州的镀金时代世家；另一类是刻意不上榜、公司又大得多的私营企业主。此外榜单本身有两处已经过时或不准确：Bob Kierlin 已于 2025 年 2 月去世，而 Fastenal 从 1987 年上市起就不是家族企业。</p>
+  <ul class="miss" id="miss"></ul>
+  <p class="minor">还有几家规模够但资料稀薄的：Davis 家族（Davisco Foods，2018 年 Forbes 家族榜 17 亿美元）、Rosen 家族（Rosen's Diversified，2018 年 12.5 亿美元）、Jeffrey Michael（Corvel，2025 年 Forbes 23.4 亿美元）。它们没有进主图，因为公开的时间线资料不足以支撑一条完整的存续带。</p>
+</section>
+
+<section class="prose">
+  <h2>读这张图之前要知道的</h2>
+  <ul class="notes">
+    <li>私营公司的家族财富估值全是推算。彭博对嘉吉家族持股比例的推算依据是债券募集说明书的股份类别与股数、1972 年一起家族信托税务诉讼、Wayne G. Broehl 撰写的公司史，以及 Margaret Cargill 2006 年身故时持有 17.5% 这一事实。任何单个成员的具体数字只能看数量级，不能当精确值。</li>
+    <li>“规模”那一栏的单位不统一——有的是公司年营收，有的是家族净值估算，有的是一次交易对价。这三者不可互相比较，所以每一格都标了口径。凡是未披露的写“未披露”，不做估算填空。</li>
+    <li>Forbes 的家族榜口径变过多次：2014 年首版门槛 10 亿美元，2024 年起提高到 100 亿美元。跨年份比较排名基本无意义。比较绝对值也要看当年该家族的资产是经营性资产还是金融资产——前者按企业价值估，后者按可核查净值估，两者能差出好几倍。Carlson 家族 2014 到 2015 年“蒸发”80 亿美元，就是这个口径切换造成的。</li>
+    <li>控制权终止年份是按“最后一位家族成员失去公司决策权”或“股权被外部收购”划的，有些家族（如 Pillsbury）在这之后仍有成员长期任高管。带里程碑的细节面板里写了具体情况。</li>
+    <li>每个家族的细节面板底部列出了该条目所依据的具体来源。凡是来源之间打架的地方（希尔铁路更名年份、哈伯德创办年份、Marvin 接班年份、Rauenhorst 夫妇去世年份、双城队收购价），都写在该条目的说明栏里，本页不替读者做取舍。</li>
+    <li>本页有一处结论是分析而非事实：Carlson 家族 2015 年估值重定价的原因（用 CWT 45% 股权的成交价反推整体估值），是本页作者的推断，Forbes 从未公布过调整理由。已在该条目中单独标注。</li>
+  </ul>
+</section>
+
+<section class="prose">
+  <h2>全部资料来源</h2>
+  <p>下面是本页所有事实所依据的公开来源，按引用顺序排列。所有数据截至 2026 年 9 月。</p>
+  <ul class="srclist" id="srclist"></ul>
+</section>
+
+<footer>
+  本页为个人研究整理，非投资建议。私营公司的财富与营收数字均为第三方推算，不构成对任何公司或个人财务状况的陈述。
+</footer>
+
+</div>
+
+<script>
+const D=[
+{id:"cargill",name:"Cargill-MacMillan",cn:"嘉吉—麦克米伦",start:1865,ctrlEnd:2026,end:2026,st:"hold",inVideo:true,
+ tag:"粮食贸易 · 五代未上市",
+ origin:"创办于爱荷华州 Conover，总部现设明尼苏达州 Minnetonka",geo:"partial",
+ sum:"唯一一个五代之后所有权仍完整、公司从未上市的家族。它做的是粮食——需求不随周期消失、规模越大议价越强的必需品。关键机制不是不分家，而是股权凭证可以拆、公司实体不拆。",
+ stats:[["1540 亿美元","公司年营收","截至 2025 年 5 月的财年"],["约 87%–90%","家族持股","Forbes 记约 90%，彭博按债券募集说明书推算 87.2%"],["21 位","家族亿万富翁","Forbes 现行口径；2018 年时为 14 位"]],
+ miles:[[1865,"W.W. Cargill 在爱荷华州 Conover 一条铁路末端开设第一个粮仓"],[1870,"三个兄弟加入，开始直接向农民收粮、经铁路运往城市"],[1898,"John MacMillan Sr. 通过联姻进入家族，开启第二支系"],[1976,"Whitney MacMillan 出任 CEO，成为最后一位掌舵的家族成员"],[1995,"Whitney 卸任，公司转入职业经理人治理"],[2006,"Margaret Cargill 身故，其 17.5% 股权遗赠慈善"],[2011,"公司分拆 Mosaic 以变现该笔股权，其余成员持股比例被动上升"],[2024,"彭博列为全球第 11 富有家族，合计约 510 亿美元"]],
+ folk:[["Pauline MacMillan Keinath","第四代 · 约 9%，被认为是最大个人股东 · 居密苏里州"],["Gwendolyn Sontheim Meyer","第五代 · 彭博口径约 11% · 支系归属未公开"],["Austen Cargill II、James Cargill II、Marianne Liebmann","W.W. 曾孙三兄妹 · 2022 年各约 54 亿美元"],["John H. MacMillan III","2008 年身故 · 九名子女均为亿万富翁"],["Whitney MacMillan","1976–1995 末任家族 CEO · 2020 年身故"]],
+ caveat:"Forbes 列出 21 位亿万富翁，公开可查到姓名与支系归属的约只有一半。彭博对持股的推算依据是债券募集说明书的股份类别与股数、1972 年一起家族信托税务诉讼、Wayne G. Broehl 撰写的公司史，以及 Margaret Cargill 身故时持有 17.5% 这一事实。",
+ srcs:["forbes-cargill","bloomberg-meyer","agfunder","forbes-wmacmillan"]},
+
+{id:"washburn",name:"Washburn / Bell",cn:"沃什伯恩—贝尔（通用磨坊）",start:1866,ctrlEnd:1888,end:2026,st:"gone",inVideo:false,
+ tag:"面粉 · Pillsbury 的死对头",
+ origin:"明尼阿波利斯",geo:"yes",
+ sum:"视频列了 Pillsbury 却漏了它的百年对手。而这条线的结局更狠：1888 年家族继承人直接被职业经理人赶出公司，比 Pillsbury 失去控制权还早。公司后来变成 General Mills，2001 年反手买下了老对手 Pillsbury。",
+ stats:[["1.23 亿美元","1928 年组建 General Mills 时销售额","当时 5800 名员工"],["1888 年","家族继承人被逐出","比 Pillsbury 更早失去控制权"],["每股 65 美元","1928 年 11 月 30 日纽交所首日","此后连续派息至今"]],
+ miles:[[1866,"Cadwallader C. Washburn 在明尼阿波利斯建起第一座磨坊，公司名为 Minneapolis Milling Company"],[1869,"与 Charles Pillsbury 共同组建明尼阿波利斯磨坊主协会"],[1877,"John Crosby 入伙，公司更名 Washburn Crosby Company"],[1878,"Washburn A 磨坊发生面粉粉尘爆炸被毁，Washburn 重建"],[1880,"在辛辛那提首届国际磨坊主展览会包揽金银铜牌，最好的一款面粉从此叫 Gold Medal"],[1888,"James S. Bell 接掌公司，Washburn 的继承人被逐出"],[1924,"公司买下 WLAG 电台并改名 WCCO，以纪念 Crosby 与公司"],[1928,"James Ford Bell 把 Washburn Crosby 与另外四家磨坊合并组建 General Mills，11 月 30 日在纽交所以每股 65 美元开盘"],[2001,"General Mills 以 104 亿美元买下老对手 Pillsbury"]],
+ folk:[["Cadwallader C. Washburn","创办人 · 1866 年建起明尼阿波利斯第一座磨坊"],["William D. Washburn","其弟 · 另一支面粉生意 · Fair Oaks 巨宅主人，1884 年在此为希尔办庆功宴"],["John Crosby","1877 年入伙 · 1887 年去世，其子 Franklin 接手"],["James S. Bell","1888 年接掌 · 家族继承人在此时出局"],["James Ford Bell","其子 · 1928 年组建 General Mills"]],
+ caveat:"“继承人被逐出”这一表述来自 International Directory of Company Histories，是英文原始记述的转译。沃什伯恩与贝尔两支的家族史在公开资料里比 Pillsbury 稀薄得多。",
+ srcs:["encyc-genmills","mnhs-genmills","wiki-genmills","gm-history"]},
+
+{id:"pillsbury",name:"Pillsbury",cn:"皮尔斯伯里",start:1869,ctrlEnd:1989,end:2001,st:"gone",inVideo:true,
+ tag:"面粉 · 明尼阿波利斯磨坊王朝",
+ origin:"明尼阿波利斯",geo:"yes",
+ sum:"视频排在第二，但这是一个反面案例：家族在创办 20 年后就把磨坊卖给了英国财团，此后一百年公司数次易主，最终连品牌都归了当年的对手 General Mills。留下的是州长、公园和大学捐赠，不是控制权。",
+ stats:[["1 万美元","1869 年起点","买下一家磨坊三分之一股权"],["每股 66 美元","1989 年被收购价","Grand Metropolitan 敌意要约"],["104 亿美元","2001 年 General Mills 收购对价","买下 Pillsbury 主要资产"]],
+ miles:[[1869,"27 岁的 Charles A. Pillsbury 以 1 万美元买下明尼阿波利斯一家面粉厂三分之一股权"],[1869,"与竞争对手 Washburn Crosby 共同组建明尼阿波利斯磨坊主协会"],[1872,"日产能达 2000 桶，改组为 C.A. Pillsbury and Company"],[1881,"三场磨坊大火"],[1889,"卖给英国财团，重组为伦敦上市的 Pillsbury-Washburn Flour Mills Ltd，Charles 留任董事总经理"],[1923,"与英国母公司彻底切割"],[1965,"面团宝宝 Poppin Fresh 首次登场"],[1967,"收购汉堡王"],[1979,"收购冷冻蔬菜品牌 Green Giant"],[1988,"利润暴跌至 690 万美元，不到前一年的一半；10 月 Grand Metropolitan 发出每股 60 美元要约"],[1989,"抗拒近三个月后以每股 66 美元被收购；毒丸与分拆汉堡王的防御被法院禁止"],[2001,"General Mills 以 104 亿美元买下 Pillsbury 主要资产；汉堡王留在 Diageo 直至 2002 年"]],
+ folk:[["Charles A. Pillsbury","创办人 · 1869 年入行时 27 岁 · 1889 年出售后留任董事总经理"],["John S. Pillsbury","其叔父 · 明尼苏达州第八任州长 · 明尼苏达大学主要捐助人"],["Philip W. Pillsbury","第三代 · 20 世纪中期长期主政"]],
+ caveat:"1889 年那次出售之后，家族成员仍长期担任高管，但公司所有权已经外部化。图中把控制权终止划在 1989 年，取的是股权层面无可争议的终点。",
+ srcs:["encyc-pillsbury","britannica-pillsbury","company-histories-pillsbury","wiki-pillsbury"]},
+
+{id:"hill",name:"James J. Hill",cn:"希尔（大北方铁路）",start:1878,ctrlEnd:1916,end:1970,st:"gone",inVideo:false,
+ tag:"铁路 · 帝国建造者",
+ origin:"生于加拿大安大略；18 岁定居圣保罗，公司总部设圣保罗",geo:"partial",
+ sum:"视频完全没提他，这是最大的遗漏。以 1916 年的美元计，希尔的财富在当时的明州无人能及，而且他的铁路帝国是在没有任何联邦补贴的情况下建起来的——这一点和范德比尔特、哈里曼都不同。",
+ stats:[["6300 万美元","1916 年身故时个人财富","另有逾 2 亿美元相关资产"],["3.6 万平方英尺","Summit Avenue 宅邸","1891 年建成，当时全州最大私宅，造价逾 93 万美元"],["8368 英里","大北方铁路里程","1889–1970 年运营"]],
+ miles:[[1856,"18 岁从加拿大安大略来到圣保罗，在轮船码头做文员"],[1866,"自办小型货运生意，后创办汽船公司"],[1878,"与 Norman Kittson、George Stephen、Donald Smith 三人合伙买下濒临破产的 St. Paul & Pacific 铁路"],[1879,"重组为 St. Paul, Minneapolis & Manitoba Railway"],[1883,"出任总裁"],[1884,"因修建石拱桥把铁路引过密西西比河，明尼阿波利斯商界在 William Washburn 的 Fair Oaks 宅邸为他办庆功宴"],[1889,"9 月 18 日把 Minneapolis & St. Cloud 更名为 Great Northern Railway"],[1891,"Summit Avenue 240 号宅邸落成"],[1893,"铁路抵达华盛顿州 Everett/西雅图"],[1901,"与摩根组建 Northern Securities 控股公司"],[1904,"最高法院判其违反谢尔曼反托拉斯法，勒令解散"],[1916,"在自家 Summit Avenue 宅邸去世；长子 Louis Hill 继任大北方铁路总裁"],[1970,"大北方铁路并入 Burlington Northern，家族痕迹消失"]],
+ folk:[["James J. Hill","创办人 · 1838 年生于加拿大安大略 · 十个子女，其中五人后来在 Summit Avenue 上安家"],["Mary Theresa Mehegan Hill","其妻 · 两人相识时她是餐厅服务员"],["Louis W. Hill","次子 · 继任大北方铁路总裁 · 住在隔壁 260 号"]],
+ caveat:"更名 Great Northern 的年份有出入：维基与大北方铁路历史学会记为 1889 年 9 月 18 日，明尼苏达历史学会与大英百科记为 1890 年。图上取 1889。1916 年的 6300 万美元跨世纪购买力换算方法不一，此处不做折算。",
+ srcs:["mnhs-hill","gnrhs","historylink-hill","wiki-gn","americanaristocracy"]},
+
+{id:"weyerhaeuser",name:"Weyerhaeuser",cn:"韦尔豪泽",start:1891,ctrlEnd:1914,end:2026,st:"ceded",inVideo:false,
+ tag:"木材 · 希尔的隔壁邻居",
+ origin:"生于德国；1891–1914 居圣保罗，公司总部设华盛顿州塔科马",geo:"partial",
+ sum:"他是希尔在 Summit Avenue 的邻居，两人的生意也互相咬合——1900 年他从希尔控制的 Northern Pacific 手里，用每英亩 6 美元买下华盛顿州 90 万英亩林地。财富和人脉形成于圣保罗，公司却从一开始就注册在塔科马。",
+ stats:[["540 万美元","1900 年 1 月 3 日那笔土地交易","90 万英亩，每英亩 6 美元"],["16 家 + 30 家","他任总裁的木材公司数 / 大股东身份的公司数","被称为“木材大王”"],["200 万英亩","一生在西北部购入的林地","平均成本每英亩 8.8 美元"]],
+ miles:[[1852,"随家人从德国移民美国"],[1860,"与妹夫 Frederick Denkmann 合伙买下伊利诺伊一家破产锯木厂"],[1872,"出任密西西比河伐木公司总裁"],[1891,"把家庭与公司办公室迁到圣保罗，因为那里已成为伐木业新中心"],[1893,"搬到 Summit Avenue 266 号，成为希尔的邻居，两人成为密友"],[1900,"1 月 3 日与 11 位投资人以 540 万美元买下希尔控制的 Northern Pacific 在华盛顿州的 90 万英亩林地，随即成立 Weyerhaeuser Timber Company，总部设在塔科马"],[1903,"持有林地增至 150 万英亩"],[1914,"在加州帕萨迪纳去世"]],
+ folk:[["Frederick Weyerhaeuser","创办人 · 1834 年生于德国 Niedersaulheim · 七个子女"],["Frederick C.A. Denkmann","其妹夫 · 最早的合伙人"],["John Weyerhaeuser","长子 · 1891 年父亲西迁圣保罗时留守伊利诺伊 Rock Island 的锯木厂"]],
+ caveat:"这个家族严格说不算“明尼苏达家族”：明州是他 1891 至 1914 年的居住地和办公地，公司本身从 1900 年成立就设在华盛顿州塔科马。列入此表是因为那笔奠基性的土地交易是在 Summit Avenue 的客厅里谈成的。",
+ srcs:["historylink-weyer1900","historylink-weyer","mnopedia-weyer","britannica-weyer"]},
+
+{id:"dayton",name:"Dayton",cn:"戴顿（Target）",start:1902,ctrlEnd:1983,end:2026,st:"ceded",inVideo:true,
+ tag:"百货零售 · 孵化出 Target",
+ origin:"明尼阿波利斯",geo:"yes",
+ sum:"教科书级的“公司活下来、家族退出去”。1969 年 IPO 后家族仍持股约 85%，八年后降到 43%，1983 年最后一位家族成员离开管理层，2000 年公司连名字都改了。留下的制度遗产是企业慈善的“5% 俱乐部”。",
+ stats:[["约 85% → 43%","IPO 后家族持股","1969 年 → 1977 年"],["1400 万美元","1938 年公司规模","创办人去世时"],["16 亿美元","2018 年 Forbes 家族净值","全美家族榜第 157 位"]],
+ miles:[[1881,"26 岁的 George Dayton 从纽约州来到明州小镇 Worthington 处理不良地产投资，很快拥有当地银行与大片农田"],[1893,"Westminster 长老会教堂在大恐慌中被焚，教友 George Dayton 买下隔壁空地并盖起六层楼"],[1902,"劝说 Goodfellow's 百货迁入该楼，随后买下并改名"],[1923,"长子 David 43 岁去世，George 开始把生意转给次子 Nelson"],[1929,"股灾前夕收购明尼阿波利斯珠宝商 J.B. Hudson & Son"],[1938,"George 去世，公司规模 1400 万美元"],[1956,"在明州 Edina 建成全美第一座室内购物中心 Southdale，并主动邀请老对手 Donaldson's 入驻"],[1962,"第一家 Target 在 Roseville 开业"],[1969,"与底特律的 J.L. Hudson 合并，成为全美第 14 大非食品零售商，合计销售额逾 8 亿美元"],[1976,"戴顿家族基金会促成明尼阿波利斯商会成立“5% 俱乐部”，最多时 23 家公司各捐税前收入的 5%"],[1979,"Target 达到 80 家店、销售额逾 10 亿美元"],[1983,"最后一位戴顿家族成员退出管理层，当年利润逾 2.4 亿美元"],[2000,"Dayton Hudson 更名 Target Corporation"],[2004,"Target 卖掉全部 Mervyn's 与 Marshall Field's 门店"]],
+ folk:[["George Draper Dayton","创办人 · 长老会教徒 · 以保守稳健著称"],["David Dayton","长子 · 1923 年 43 岁去世"],["Nelson Dayton","次子 · 延续父亲的经营风格"],["五位孙辈","1950 年代接手 · 据美国商业史中心记述，他们明确选择把生意做大以维系家族和睦"],["Bruce B. Dayton","孙辈之一 · 后来撰写了家族史与 Target 创办史"]],
+ caveat:"孙辈“做大生意以维系和睦”的说法出自美国商业史中心的记述，属于家族自述性质的历史叙事，不是可独立核查的事实。",
+ srcs:["mnopedia-daytons","wiki-daytons","encyc-dayton","abhc-target","bmtn-families"]},
+
+{id:"andersen",name:"Andersen",cn:"安德森门窗",start:1903,ctrlEnd:2026,end:2026,st:"hold",inVideo:false,
+ tag:"门窗制造 · 家族加员工持股",
+ origin:"创办于威斯康星州 Hudson，总部现设明尼苏达州 Bayport",geo:"partial",
+ sum:"视频列了 Marvin 却漏了 Andersen——后者体量大得多，1990 年时销售额已是 Marvin 的近四倍。所有权结构也更特别：家族持多数，员工持约四分之一。",
+ stats:[["约 30 亿美元","公司年营收","维基百科口径并标注“需更新”"],["约 27%","员工持股比例","其余为家族持有"],["1.3 万人","员工数","2023 年"]],
+ miles:[[1903,"Hans Andersen 在威斯康星州 Hudson 创办 Andersen Lumber Company"],[1904,"首年窗框业务销售额 7.4 万美元"],[1905,"签下第一家经销商，推出“两捆式”包装法"],[1908,"卖掉两家木材场，专注窗框制造"],[1916,"重新进入木材生意，1930 年代起再度陆续卖出"],[1978,"75 周年，销售额 2.8 亿美元，其中四分之三来自 Perma-Shield 产品线"],[1990,"Forbes 估其销售额约 10 亿美元，居全美木窗行业第一，同期 Marvin 为 2.65 亿"]],
+ folk:[["Hans Andersen","创办人 · 丹麦移民"],["安德森家族后代","持有公司多数股权，具体成员与比例未公开"]],
+ caveat:"营收数字来自维基百科且标注了“需更新”。作为私营公司，Andersen 不披露财务，任何数字都是外部估算。公司创办于威斯康星州，1913 年后才落在明州 Bayport。",
+ srcs:["wiki-andersen","encyc-andersen","company-histories-marvin"]},
+
+{id:"marvin",name:"Marvin",cn:"马文门窗",start:1912,ctrlEnd:2026,end:2026,st:"hold",inVideo:true,
+ tag:"门窗制造 · 沃罗德小镇第四代",
+ origin:"明尼苏达州 Warroad",geo:"yes",
+ sum:"明州最北端一个小镇上的家族企业，四代未上市。1961 年一场大火几乎把它烧没——保险只覆盖 57%，靠农村电力管理局和小企业管理局的贷款重启。大萧条期间不裁员的传统也是从这里来的。",
+ stats:[["6 亿–22 亿美元","公司年营收区间","2017 年 Star Tribune 报道 6–10 亿；数据商 ZoomInfo 近期估 22 亿"],["第四代","当前掌门","Paul Marvin，2017 年上任"],["约 6000 人","员工数","2017 年，12 处厂区"]],
+ miles:[[1904,"George Marvin 来到沃罗德"],[1912,"创办 Marvin Lumber & Cedar Company，另经营饲料、五金与谷物磨坊"],[1930,"大萧条期间坚持不裁员"],[1939,"长子 Bill 加入，成为公司第 8 名员工"],[1945,"Bill 主张转向门窗制造，以留住返乡退伍军人；George 起初并不认同"],[1951,"改称 Marvin Windows"],[1961,"工厂被大火烧毁，保险仅覆盖 57%，靠 REA 与 SBA 贷款重启"],[1978,"开始出口海外"],[1979,"重新把圆拱窗带回住宅市场"],[1981,"Frank Marvin 任总裁；在田纳西建成明州以外第一座工厂"],[1989,"销售额从十年前的 4000 万增至 2.65 亿美元，利润约 2600 万"],[1991,"John“Jake”Marvin 任总裁，四年后由妹妹 Susan 接任；Jake 于 2000 年任 CEO"],[2017,"Paul Marvin 出任 CEO，是第四代中第一位掌舵者"]],
+ folk:[["George G. Marvin","创办人"],["William“Bill”Marvin","次代 · 把公司从木材转向门窗"],["Frank Marvin","第三代 · 1981 年任总裁"],["John“Jake”Marvin","第三代 · 1991 年任总裁、2000 年任 CEO · 主持第四代股权协议重签"],["Susan Marvin","第三代 · 1995 年任总裁"],["Paul Marvin","第四代 · 2017 年起 CEO · 上任时 42 岁"]],
+ caveat:"Bill Marvin 接掌公司的年份两个来源不一致：Twin Cities Business 记为 1960 年任总裁，company-histories 记为 1957 年接替父亲。22 亿美元营收来自数据商 ZoomInfo 的估算，不是公司披露。",
+ srcs:["tcb-marvin","strib-marvin","marvin-history","company-histories-marvin"]},
+
+{id:"hubbard",name:"Hubbard",cn:"哈伯德广播",start:1925,ctrlEnd:2026,end:2026,st:"hold",inVideo:true,
+ tag:"广播电视 · 三代经营",
+ origin:"明尼阿波利斯／圣保罗",geo:"yes",
+ sum:"家族财富的主体不来自广播本身，而来自一次时点精准的退出：把卫星电视业务 USSB 以 13 亿美元卖给 DirecTV 的母公司 Hughes Electronics。剩下的电视台和电台业务至今仍由家族持有。",
+ stats:[["13 亿美元","USSB 售价","买方 Hughes Electronics（DirecTV 母公司）"],["25% → 100%","创办人在 KSTP 的持股","1928 年只占四分之一，1947 年才买下其余"],["16 亿美元","2025 年 Forbes 净值","Stanley S. Hubbard"]],
+ miles:[[1923,"Stanley E. Hubbard 回到明尼苏达，开始筹备广播事业"],[1925,"2 月 WAMD 开播（“Where All Minneapolis Dances”），据称是全美第一家完全靠广告收入维持的电台；他每隔几小时要离开话筒去卖广告"],[1925,"自办新闻采集机构，因为美联社和合众社当时还不服务广播业"],[1928,"WAMD 与圣保罗的 KFOY 合并成 KSTP，Hubbard 任总经理，但只持有 25% 股份"],[1938,"买下 RCA 卖出的第一台电视摄像机，开始闭路电视试验"],[1947,"FCC 批准他收购 KSTP 其余 75% 股份"],[1948,"4 月 27 日 KSTP-TV 开播，是芝加哥以西第一家电视台"],[1998,"USSB 以 13 亿美元售予 Hughes Electronics，交易于次年完成"],[2002,"卫星新闻采集机构 Conus Communications 大部分业务关闭"]],
+ folk:[["Stanley E. Hubbard","创办人 · 1897 年生 · 一战飞行员出身"],["Stanley S. Hubbard","次代 · 现任董事长兼 CEO · 17 岁起在父亲的公司做道具 · 明大攻读新闻摄影与管理"],["五名子女","第三代 · 已接手日常运营"]],
+ caveat:"创办年份来源不一：公司官网与维基记 WAMD 于 1925 年 2 月开播（执照 2 月 16 日，正式首播 2 月 22 日），Encyclopedia.com 与广播名人堂记为 1923 年，Stanley Hubbard 本人在后来的访谈中把起点追溯到 1924 年 4 月。图上取 1925。USSB 交易年份亦有 1998 与 1999 两种记法（宣布与完成之别）。",
+ srcs:["hubbard-history","wiki-hubbard","encyc-hubbard","pavek","radiohof","wiki-kstp"]},
+
+{id:"mcknight",name:"McKnight / 3M",cn:"麦克奈特（3M）",start:1907,ctrlEnd:1966,end:2026,st:"ceded",inVideo:false,
+ tag:"制造业 · 财富沉淀为基金会",
+ origin:"明尼苏达州（3M 总部 Maplewood）",geo:"yes",
+ sum:"视频漏了 3M 这条线。McKnight 从助理记账员做到总裁，在 3M 干了 59 年，但他从未“拥有”3M——他把财富制度化成了一个基金会，现有 25 亿美元捐赠基金，比榜上多数家族的净值都高。这是明州特有的第三条路径：不传给子孙，也不卖掉，而是转成永续机构。",
+ stats:[["25 亿美元","McKnight 基金会捐赠基金","2022 年发放 1.2 亿美元赠款"],["59 年","在 3M 的职业生涯","1907–1966，从助理记账员到 CEO"],["第四代","基金会现状","家族基金会，与 3M 公司无隶属关系"]],
+ miles:[[1907,"William L. McKnight 以助理记账员身份加入 3M"],[1953,"与妻子 Maude 成立 McKnight 基金会"],[1966,"从 3M 卸任，59 年职业生涯结束"],[1974,"妻子去世后，邀请独女 Virginia McKnight Binger 接掌基金会"],[2009,"Robert J. Struyk 成为基金会 1953 年以来的第五任主席"],[2022,"基金会全年发放 1.2 亿美元赠款"]],
+ folk:[["William L. McKnight","3M 早期总裁兼 CEO · 以鼓励创新与识人著称"],["Maude L. McKnight","共同创办基金会"],["Virginia McKnight Binger","独女 · 1974 年起主政，确立了基金会的社区导向"],["Erika L. Binger","第三代 · 曾任基金会主席"]],
+ caveat:"McKnight 家族从未控制过 3M，基金会与 3M 公司之间也没有隶属关系。图上的色带在这里指他个人在公司的主政期，不是所有权。",
+ srcs:["wiki-mcknight","wiki-mcknight-person","ndc-mcknight","strib-foundations"]},
+
+{id:"carlson",name:"Carlson",cn:"卡尔森",start:1938,ctrlEnd:2021,end:2026,st:"gone",inVideo:true,
+ tag:"印花积分 → 酒店 → 商旅",
+ origin:"明尼阿波利斯（后迁 Minnetonka）",geo:"yes",
+ sum:"最值得研究的负面样本。Forbes 数字从 103 亿掉到 22 亿，但那次下跌是记账修正而非财富损失；真正的毁灭发生在六年后，而且方向和“卖光套现”的直觉完全相反——他们是在加仓商旅，然后撞上了疫情。",
+ stats:[["55 美元","1938 年创业资金","向房东借的"],["103 亿 → 22 亿","2014 → 2015 年 Forbes 家族榜","一年内，期间无重大资产流失"],["归零","2021 年家族的 CWT 股权","以股权换取债务豁免"]],
+ miles:[[1938,"Curt Carlson 用房东借的 55 美元创办 Gold Bond Stamp Company"],[1950,"成为全美最大的貂皮大衣分销商（积分兑换品）"],[1962,"与九位商界友人各出一成买下明尼阿波利斯的 Radisson 酒店，后逐一收购其余股份"],[1973,"更名 Carlson Companies"],[1975,"收购当时只有 12 家店的 T.G.I. Friday's"],[1977,"收购 Country Kitchen International"],[1987,"创办 Country Inns & Suites"],[1994,"合并成立 Carlson Wagonlit Travel"],[1999,"Curt Carlson 去世"],[2008,"Hubert Joly 出任 CEO，是公司史上第一位非家族掌门"],[2012,"Joly 辞职转任 Best Buy CEO"],[2014,"以约 8 亿美元卖掉 TGI Fridays，随即用约 3 亿美元从摩根大通买回 CWT 剩余 45% 股权"],[2015,"Forbes 家族榜排名从第 21 位跌至第 122 位，估值从 103 亿降至 22 亿"],[2016,"12 月把 Carlson Hotels 连同 Rezidor 51.3% 股份整体售予海航旅业（价格未披露，彭博消息源称约 20 亿美元）"],[2021,"9 月达成重组协议，削债近 9 亿、注入 3.5 亿新股本；11 月 11 日 Carlson Travel 及 37 家关联公司在德州申请预打包破产，次日获批，家族以股权换债务豁免"]],
+ folk:[["Curt Carlson","创办人 · 瑞典移民之子 · 1999 年去世"],["Marilyn Carlson Nelson","长女 · 1998–2008 任 CEO"],["Barbara Carlson Gage","次女 · 与姐姐共同持有 · 后已不再参与"],["Edwin“Skip”Gage","Barbara 之夫 · 1990 年代短暂任 CEO · 主持精简旗下小公司"],["Diana Nelson","第三代 · 2013 年起任董事长"],["Hubert Joly","首位非家族 CEO · 后转任 Best Buy CEO"]],
+ caveat:"3 亿美元买 45% 意味着 CWT 全部股权的第三方成交价约 6.7 亿美元——远低于此前按 1300 家酒店加 900 家餐厅的体量所推算的估值。这个推论是本页作者的分析，不是 Forbes 公布的调整理由。破产后家族仍保有未卷入程序的家族办公室 Carlson Private Capital Partners。",
+ srcs:["forbes-carlson","wiki-carlson","strib-cwt","skift-cwt","tcb-fridays","bloomberg-hna","hnn-hna","inc-carlson"]},
+
+{id:"bakken",name:"Bakken / Medtronic",cn:"巴肯（美敦力）",start:1949,ctrlEnd:1970,end:2026,st:"ceded",inVideo:false,
+ tag:"医疗器械 · 车库起家",
+ origin:"明尼阿波利斯",geo:"yes",
+ sum:"明州最重要的产业创造之一，视频完全没提。Earl Bakken 在一个车库里开始修医院设备，1957 年做出了第一台电池供电、可穿戴的晶体管起搏器。公司成长为全球医疗器械巨头，但家族从未把它变成财富王朝。",
+ stats:[["1949 年","车库创办","与妹夫 Palmer Hermundslie 合伙"],["1957 年","第一台可穿戴电池起搏器","外置、电池供电、晶体管式"],["无","家族当前控制权","公司为纽交所上市"]],
+ miles:[[1949,"Earl Bakken 与妹夫 Palmer Hermundslie 在车库创办 Medtronic，最初只是修理医院电子设备"],[1957,"应医生请求做出第一台外置、电池供电、晶体管化的可穿戴起搏器"],[1970,"公司转入职业管理，家族影响力逐步退出"],[2018,"Earl Bakken 在夏威夷去世，享年 94 岁"]],
+ folk:[["Earl Bakken","创办人 · 1924 年生于明州 Columbia Heights · 明大电机工程学士与硕士 · 后创办 Bakken 医学与电学博物馆"],["Palmer Hermundslie","其妹夫 · 共同创办人"]],
+ caveat:"1949 这个创办年份来自广为流传的公司创业史，本页未核到原始档案；1957 年的起搏器与创办人生卒年经维基百科核实。家族退出经营的时点是概括表述，不是某个具体事件。",
+ srcs:["wiki-bakken"]},
+
+{id:"schwan",name:"Schwan",cn:"施万冷冻食品",start:1952,ctrlEnd:2019,end:2026,st:"ceded",inVideo:false,
+ tag:"冷冻食品 · 一人一车起家",
+ origin:"明尼苏达州 Marshall",geo:"yes",
+ sum:"视频漏了它，但按交易金额它比榜上一半的家族都大。2018 年把 80% 卖给韩国 CJ 第一制糖，作价 18.4 亿美元现金，同时保留了送货业务的全部股权——把制造和品牌换成现金，留下和终端客户的直接关系。",
+ stats:[["18.4 亿美元","2018 年交易对价","买方韩国 CJ 第一制糖，现金"],["80% / 20%","出售比例 / 保留比例","送货业务另 100% 保留"],["约 30 亿美元","出售时公司年营收","约 1.2 万名员工"]],
+ miles:[[1952,"Marvin Schwan 在明州 Marshall 以一人一车做冷冻食品送货起家"],[1970,"进入披萨制造，后拥有 Red Baron、Tony's、Freschetta 等品牌"],[1993,"Marvin Schwan 心脏病发去世，享年 64 岁"],[2018,"11 月宣布以 18.4 亿美元把 80% 股权售予 CJ 第一制糖，保留 Schwan's Home Service 全部股权"],[2019,"交易完成，公司成为 CJ Foods America 子公司，总部仍在 Marshall 与 Bloomington"]],
+ folk:[["Marvin Schwan","创办人 · 1993 年去世"],["Paul Schwan","其子 · 董事会成员 · 主导出售过程中的传承考量"]],
+ caveat:"施万家族在出售后的净资产从未公开估算，Forbes 未将其列入家族榜。",
+ srcs:["ap-schwan","preparedfoods-schwan","siouxfalls-schwan"]},
+
+{id:"rauenhorst",name:"Rauenhorst / Opus",cn:"劳恩霍斯特（Opus）",start:1953,ctrlEnd:2026,end:2026,st:"hold",inVideo:false,
+ tag:"商业地产 · 设计施工一体化",
+ origin:"明尼苏达州（Minnetonka）",geo:"yes",
+ sum:"视频漏了这家。Opus 首创 design-build 一体化模式，把开发、设计、施工放在一家公司里。创办人去世时留下了五个独立基金会——这个家族选择把资产同时留在企业和慈善两条线上。",
+ stats:[["约 10 亿美元","GHR 基金会预期规模","2017 年资产约 4.95 亿，遗产结算后预计超过 10 亿"],["71 年","公司历史","1953 年创办时名为 Trojan Construction"],["五个","创办人身后留下的基金会数量","另有 Opus 基金会年捐 450 万美元"]],
+ miles:[[1950,"Gerald 与 Henrietta 结婚"],[1953,"Gerald“Gerry”Rauenhorst 创办 Trojan Construction"],[1968,"创办 15 年后，与妻子 Henrietta 成立 GHR 基金会"],[2000,"把公司控制权交给儿子 Mark Rauenhorst，另两个儿子 Joe 和 Neil 主管区域公司"],[2014,"创办人夫妇先后离世，身后留下五个基金会"],[2017,"GHR 基金会资产约 4.95 亿美元，预计遗产结算后超过 10 亿，将进入明州捐赠规模前五"],[2024,"获评 Twin Cities Business 明尼苏达家族企业奖"]],
+ folk:[["Gerald“Gerry”Rauenhorst","创办人 · 曾婉拒圣托马斯大学以其名命名商学院，后只接受用公司名 Opus"],["Henrietta“Hanky”Rauenhorst","其妻 · 被认为塑造了公司价值观，但从未有过名片"],["Mark Rauenhorst","次代 · 2000 年起掌管"],["Joe / Neil Rauenhorst","次代 · 主管区域运营公司"],["Amy Rauenhorst Goldman","幼女 · 掌管 GHR 基金会"],["Matt Rauenhorst","第三代"]],
+ caveat:"创办人夫妇的去世年份两个来源打架：Star Tribune 记为 2010 与 2014 年（未指明谁先），Twin Cities Business 明确记 Gerry 卒于 2014 年。图上只写“2014 年前后先后离世”。基金会资产为 2017 年数字，最终规模未见公开更新。",
+ srcs:["strib-ghr","tcb-opus","opus-award","strib-foundations"]},
+
+{id:"pohlad",name:"Pohlad",cn:"波拉德",start:1955,ctrlEnd:2026,end:2026,st:"hold",inVideo:true,
+ tag:"银行、地产、球队 · 三十余家企业",
+ origin:"明尼阿波利斯",geo:"yes",
+ sum:"仍是家族控股集团。2024 年 10 月宣布探索出售双城队，十个月后又宣布留任主要所有人、改为引入两组有限合伙投资者——这是一次公开的、走完全程又收回的出售尝试。",
+ stats:[["38 亿美元","2018 年 Forbes 家族净值","全美家族榜第 75 位"],["3600 万 / 4400 万美元","1984 年买下双城队","Forbes 与美联社口径不同"],["17 亿美元","双城队 Sportico 估值","2024 年"]],
+ miles:[[1930,"Carl Pohlad 在大萧条中送洗衣、扫地起家"],[1955,"创办银行与金融服务公司"],[1960,"出任 Twin City Rapid Transit 总裁，接手一家管理层刚被判贪腐的公司"],[1984,"买下明尼苏达双城队，阻止球队迁往佛州"],[1987,"双城队夺得世界大赛冠军，1991 年再夺一冠"],[1993,"把 Marquette 银行售予 First Bank System（今 US Bank）"],[2009,"Carl Pohlad 去世，享年 93 岁；三子 Jim、Bob、Bill 继承"],[2010,"PepsiAmericas 被百事收购；Bob Pohlad 于 2015 年出任百事董事"],[2022,"第三代 Joe Pohlad 接手双城队日常管理"],[2024,"10 月宣布探索出售双城队"],[2025,"8 月 13 日宣布留任主要所有人，改为引入两组有限合伙投资者"]],
+ folk:[["Carl Pohlad","创办人 · 二战退伍后起家 · 2009 年去世"],["Jim Pohlad","长子 · 掌管地产开发与投资，曾任双城队控股人"],["Bob Pohlad","次子 · 曾任 PepsiAmericas 董事长兼 CEO · 2015 年起任百事董事"],["Bill Pohlad","三子 · 掌管娱乐业务与家族基金会 · 电影制片人"],["Joe Pohlad","第三代 · Jim 的侄子 · 现任双城队执行主席"]],
+ caveat:"1984 年的收购价 Forbes 记为约 3600 万美元，美联社记为 4400 万美元，两个数字都在流通。1955 年这个创业年份是对“1950 年代创办银行与金融服务公司”的取中，不是精确年份。",
+ srcs:["forbes-pohlad","wiki-carlpohlad","mlb-pohlad-explore","mlb-pohlad-retain","cbs-pohlad","bmtn-families"]},
+
+{id:"schulze",name:"Richard Schulze",cn:"舒尔茨（百思买）",start:1966,ctrlEnd:2012,end:2026,st:"ceded",inVideo:true,
+ tag:"消费电子 · 抵押房子起家",
+ origin:"明尼苏达州圣保罗（本人现居佛罗里达）",geo:"partial",
+ sum:"严格说这是一个人而不是一个世家，而且他还有个常被略去的共同创办人 James Wheeler。1966 年靠积蓄加二次房贷开了一家音响店，做成全美最大的消费电子连锁，2012 年试图私有化未成，此后退居为最大个人股东并迁居佛罗里达。",
+ stats:[["1.05 万美元","1966 年启动资金","个人积蓄加住宅二次抵押"],["415 亿美元","公司 2025 财年营收","1117 家门店，约 8.5 万员工"],["约 11%","当前持股比例","百思买最大个人股东"]],
+ miles:[[1966,"8 月 22 日与 James Wheeler 在圣保罗开设音响店 Sound of Music，启动资金 1.05 万美元"],[1967,"首年营收 100 万美元，利润约 5.8 万美元"],[1969,"开到三家店，Schulze 买断合伙人"],[1978,"在明州开到九家店"],[1981,"Roseville 店被龙卷风掀掉屋顶，Schulze 把剩余营销预算全押在停车场“龙卷风大甩卖”上，四天赚的比过去一个月还多"],[1983,"改名 Best Buy，当时七家店、销售额 1000 万美元；在 Burnsville 开出第一家超级卖场"],[1985,"公司上市"],[1987,"登陆纽约证券交易所"],[1988,"与底特律的 Highland Superstores 打价格战，Schulze 曾提出以 3000 万美元把公司卖给 Circuit City，被对方拒绝"],[1992,"年营收突破 10 亿美元"],[2012,"提出私有化收购未成，卸任董事长；同年 Hubert Joly 从 Carlson 转任 Best Buy CEO"]],
+ folk:[["Richard M. Schulze","创办人 · 1941 年生于圣保罗 · 空军退伍后做电子产品销售 · 十名子女"],["James Wheeler","共同创办人 · 1969 年被买断"]],
+ caveat:"1991 年明州州长曾把 11 月 9 日定为 Richard M. Schulze 日。他早已不是明州居民（现居佛罗里达），所以近年不出现在明州富豪榜上。",
+ srcs:["wiki-bestbuy","strib-bby-timeline","wiki-schulze","discoverthecities"]},
+
+{id:"kierlin",name:"Bob Kierlin",cn:"基尔林（Fastenal）",start:1967,ctrlEnd:1987,end:2026,st:"ceded",inVideo:true,
+ tag:"工业紧固件 · 五人合伙",
+ origin:"明尼苏达州 Winona",geo:"yes",
+ sum:"视频把他列为在世的亿万富翁，但他已于 2025 年 2 月去世。而且这从来不是一个家族——Fastenal 是五个 Winona 同乡合伙创办的，1987 年就上市了。他以明州薪水最低的 CEO 著称，二手西装、不开好车。",
+ stats:[["82 亿美元","公司 2025 年营收","净利 13 亿美元，24,489 名员工"],["接近 10 亿美元","Forbes 曾估其净值","另有来源估 10–20 亿"],["1967 年","创办","首店开在他父亲原来的汽修铺里"]],
+ miles:[[1967,"与 Jack Remick、Van McConnon、Steve Slaggie 创办 Fastenal，后加入 Mike Gostomski，五人被称为 Fastenal Five；最初的设想是用自动售货机卖紧固件"],[1968,"出任 CEO，任期至 2002 年"],[1987,"公司上市"],[1998,"当选明尼苏达州参议员，任至 2007 年"],[2006,"捐出初始藏品与资金创办明尼苏达海洋艺术博物馆"],[2008,"Fastenal 进入标普 500"],[2014,"因 75 岁强制退休年龄卸任董事，转任顾问"],[2025,"2 月 10 日在 Winona 去世，享年 85 岁"]],
+ folk:[["Bob Kierlin","创办人 · 1939 年生于 Winona · 明大机械工程学士 + MBA · 2025 年去世"],["Steve Slaggie、Jack Remick、Van McConnon、Mike Gostomski","共同创办人"]],
+ caveat:"这一条不符合“世家”的定义：Fastenal 从 1987 年上市起就是公众公司，创办人的财富也大量捐出，没有形成代际传承结构。视频把他列为在世人物，这一点已经过时。",
+ srcs:["wiki-fastenal","wiki-kierlin","strib-kierlin","bmtn-kierlin","winonapost"]},
+
+{id:"opperman",name:"Opperman / West",cn:"奥珀曼（West 出版）",start:1968,ctrlEnd:1996,end:2026,st:"gone",inVideo:false,
+ tag:"法律出版 · 一次性变现",
+ origin:"公司创办于圣保罗，后迁 Eagan；本人生于爱荷华",geo:"partial",
+ sum:"视频漏了他。West Publishing 是美国法律出版的基石，1996 年整体售予汤森 34.3 亿美元。这是明州少见的知识产权型财富。但要说清楚：公司不是他创办的，他是从编辑做起、一路升到 CEO 并主导了那次出售的职业经理人。",
+ stats:[["34.3 亿美元","1996 年 2 月售予汤森","当时的可选项是上市、借 15 亿或卖掉"],["1975 年","推出 Westlaw","早期内部曾建议放弃、回归核心图书业务"],["9.75 亿美元","2003 年 Forbes 净值","居明州第 266 位"]],
+ miles:[[1876,"John B. West 在圣保罗创办 West Publishing，最初出版明尼苏达州最高法院判决"],[1887,"其判例汇编体系覆盖全国"],[1951,"Dwight Opperman 从德雷克大学法学院毕业，到 West 当编辑"],[1968,"升任总裁，后任 CEO"],[1975,"推出 Westlaw 在线法律检索服务，早期增长缓慢"],[1992,"公司从圣保罗市区迁至 Eagan"],[1996,"2 月以 34.3 亿美元售予多伦多的汤森集团；Opperman 说董事会当时只有三条路：上市、借约 15 亿美元、或卖掉"],[2013,"Opperman 在比佛利山去世，享年 89 岁"]],
+ folk:[["Dwight D. Opperman","1923 年生于爱荷华 Perry · 二战服役后入读德雷克大学 · 1968 年任总裁 · 明州 Dellwood 有住所，主要居住地在比佛利山"],["Vance Opperman","其子 · 出售时任公司总裁兼首席诉讼律师 · 现掌 Key Investment 与 MSP Communications"],["John B. West","1876 年公司创办人 · 1869 年 17 岁来到圣保罗"]],
+ caveat:"这一条和 Kierlin 一样不完全符合“世家”定义。Opperman 是职业经理人出身的所有者，公司由 John B. West 于 1876 年创办；财富到第二代 Vance 手上仍在延续，但载体已经换成投资公司。",
+ srcs:["strib-opperman","strib-opperman2","mnopedia-west","wiki-opperman","infodocket"]},
+
+{id:"taylor",name:"Glen Taylor",cn:"泰勒",start:1975,ctrlEnd:2026,end:2026,st:"hold",inVideo:true,
+ tag:"印刷 · 从打工仔到球队老板",
+ origin:"明尼苏达州 Springfield／Mankato",geo:"yes",
+ sum:"白手起家的典型：农家子弟，大学时在一家印刷厂打工，1975 年以 200 万美元分十年付款买下这家厂。注意一个常见误读——他买的 Carlson Wedding Service 与 Curt Carlson 的 Carlson Companies 毫无关系，只是同姓。",
+ stats:[["200 万美元","1975 年收购价","分十年付款"],["8800 万美元","1994 年买下森林狼队","2021 年协议出售作价 15 亿美元"],["29 亿美元","2025 年 Forbes 净值","明州榜首"]],
+ miles:[[1959,"在明州 Springfield 的农场长大，靠在 Carlson Wedding Service 打工付学费"],[1975,"老板 Bill Carlson 退休时，以 200 万美元分十年付款买下公司，后发展为 Taylor Corporation"],[1994,"以 8800 万美元买下明尼苏达森林狼队，阻止球队迁往新奥尔良"],[2014,"买下明星论坛报（Star Tribune）"],[2021,"与 Marc Lore、Alex Rodriguez 达成 15 亿美元分期出售协议，对方先购入约 20%"],[2023,"3 月对方再付 2.9 亿美元购入约 20%"],[2024,"3 月 Taylor 宣布交易因对方未按期完成付款而失效，双方进入仲裁"],[2025,"仲裁裁定 Lore 与 Rodriguez 胜诉，两人完成交割，Taylor 失去森林狼与山猫两支球队"]],
+ folk:[["Glen Taylor","1941 年生 · 前明尼苏达州参议员 · Taylor Corp 员工逾 1.5 万人，分布八个国家"],["Bill Carlson","原公司主人 · 与 Curt Carlson 无亲缘关系"]],
+ caveat:"Taylor Corporation 是私营公司，营收未披露；净值数字来自 Forbes 的推算。森林狼交割的具体时点与条款在双方公开陈述中曾有分歧，此处采用仲裁裁决后的公开报道口径。",
+ srcs:["ap-twolves","moneyinc","kroc-forbes","wiki-taylor"]}
+];
+
+const S={
+"forbes-cargill":["Forbes","Cargill-MacMillan family profile","https://www.forbes.com/profile/cargill-macmillan-1/"],
+"forbes-wmacmillan":["Forbes","William MacMillan profile","https://www.forbes.com/profile/william-macmillan/"],
+"bloomberg-meyer":["Bloomberg","Billionaires Index: Gwendolyn S. Meyer","https://www.bloomberg.com/billionaires/profiles/gwendolyn-s-meyer"],
+"agfunder":["AgFunderNews","Cargill-MacMillan family members propelled onto top billionaire list","https://agfundernews.com/cargill-macmillan-family-members-propelled-onto-top-billionaire-list"],
+"encyc-genmills":["Encyclopedia.com","General Mills Inc（International Directory of Company Histories）","https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/general-mills-inc"],
+"mnhs-genmills":["明尼苏达历史学会","General Mills 馆藏指南","https://libguides.mnhs.org/generalmills"],
+"wiki-genmills":["Wikipedia","General Mills","https://en.wikipedia.org/wiki/General_Mills"],
+"gm-history":["General Mills","公司官方历史","https://www.generalmills.com/about/our-history"],
+"encyc-pillsbury":["Encyclopedia.com","The Pillsbury Company","https://www.encyclopedia.com/books/politics-and-business-magazines/pillsbury-company"],
+"britannica-pillsbury":["Britannica Money","Pillsbury Company","https://www.britannica.com/money/Pillsbury-Company"],
+"company-histories-pillsbury":["Company-Histories","The Pillsbury Company — Company History","https://www.company-histories.com/The-Pillsbury-Company-Company-History.html"],
+"wiki-pillsbury":["Wikipedia","Pillsbury (brand)","https://en.wikipedia.org/wiki/Pillsbury_(brand)"],
+"mnhs-hill":["明尼苏达历史学会","James J. Hill","https://www.mnhs.org/hillhouse/learn/james-j-hill"],
+"gnrhs":["大北方铁路历史学会","Great Northern History","https://www.gnrhs.org/gn_history.php"],
+"historylink-hill":["HistoryLink.org","Hill, James J. (1838-1916)","https://www.historylink.org/file/8115"],
+"wiki-gn":["Wikipedia","Great Northern Railway (U.S.)","https://en.wikipedia.org/wiki/Great_Northern_Railway_(U.S.)"],
+"americanaristocracy":["American Aristocracy","James J. Hill House","https://americanaristocracy.com/houses/james-j-hill-house"],
+"historylink-weyer1900":["HistoryLink.org","Frederick Weyerhaeuser makes one of the largest land purchases in U.S. history on January 3, 1900","https://www.historylink.org/file/5241"],
+"historylink-weyer":["HistoryLink.org","Weyerhaeuser Company","https://www.historylink.org/file/1675"],
+"mnopedia-weyer":["MNopedia","Weyerhaeuser, Frederick (1834–1914)","https://www.mnhs.org/mnopedia/search/index/person/weyerhaeuser-frederick-1834-1914"],
+"britannica-weyer":["Britannica Money","Frederick Weyerhaeuser","https://www.britannica.com/money/Frederick-Weyerhaeuser"],
+"mnopedia-daytons":["MNopedia","Dayton's","https://www.mnhs.org/mnopedia/search/index/place/dayton-s"],
+"wiki-daytons":["Wikipedia","Dayton's","https://en.wikipedia.org/wiki/Dayton's"],
+"encyc-dayton":["Encyclopedia.com","Dayton Hudson Corp","https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/dayton-hudson-corp"],
+"abhc-target":["American Business History Center","Can Companies Re-invent Themselves? The Target Story","https://americanbusinesshistory.org/can-companies-really-reinvent-themselves-the-lessons-of-target/"],
+"bmtn-families":["Bring Me The News","Several notable Minnesota families rank among America's richest（2018）","https://bringmethenews.com/minnesota-news/several-notable-minnesota-families-rank-among-americas-richest"],
+"wiki-andersen":["Wikipedia","Andersen Corporation","https://en.wikipedia.org/wiki/Andersen_Corporation"],
+"encyc-andersen":["Encyclopedia.com","Andersen Corporation","https://www.encyclopedia.com/books/politics-and-business-magazines/andersen-corporation"],
+"company-histories-marvin":["Company-Histories","Marvin Lumber & Cedar Company — Company History","https://www.company-histories.com/Marvin-Lumber-Cedar-Company-Company-History.html"],
+"tcb-marvin":["Twin Cities Business","Marvin Windows and Doors 年表","https://tcbmag.com/honors/marvin-windows-and-doors/"],
+"strib-marvin":["Star Tribune","Marvin windows and doors manufacturer names new CEO（2017）","https://www.startribune.com/marvin-windows-and-doors-manufacturer-names-new-ceo/441694873"],
+"marvin-history":["Marvin","公司官方历史","https://www.marvin.com/our-story/history-of-marvin"],
+"hubbard-history":["Hubbard Broadcasting","公司官方历史","https://hubbardbroadcasting.com/our-company/history/"],
+"wiki-hubbard":["Wikipedia","Hubbard Broadcasting","https://en.wikipedia.org/wiki/Hubbard_Broadcasting"],
+"encyc-hubbard":["Encyclopedia.com","Hubbard Broadcasting Inc","https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/businesses-and-occupations/hubbard-broadcasting-inc"],
+"pavek":["Pavek Museum","Stanley E. Hubbard 名人堂条目","https://pavekmuseum.org/hall-of-fame/stanley-e-hubbard/"],
+"radiohof":["Radio Hall of Fame","Stanley E. Hubbard","https://www.radiohalloffame.com/stanley-e-hubbard"],
+"wiki-kstp":["Wikipedia","KSTP (AM)","https://en.wikipedia.org/wiki/KSTP_(AM)"],
+"wiki-mcknight":["Wikipedia","McKnight Foundation","https://en.wikipedia.org/wiki/McKnight_Foundation"],
+"wiki-mcknight-person":["Wikipedia","William L. McKnight","https://en.wikipedia.org/wiki/William_L._McKnight"],
+"ndc-mcknight":["NDC Partnership","McKnight Foundation 简介","https://ndcpartnership.org/knowledge-portal/climate-funds-explorer/mcknight-foundation"],
+"strib-foundations":["Star Tribune","The stories behind Minnesota's foundations","https://www.startribune.com/the-stories-behind-minnesota-s-foundations/345771302"],
+"forbes-carlson":["Forbes","Carlson family profile","https://www.forbes.com/profile/carlson/"],
+"wiki-carlson":["Wikipedia","Carlson (company)","https://en.wikipedia.org/wiki/Carlson_(company)"],
+"strib-cwt":["Star Tribune","Pandemic drives Carlson family out of the business where they made a fortune（2021）","https://www.startribune.com/article/600127663"],
+"skift-cwt":["Skift","Carlson Family Gives Up Control of Namesake Agency CWT in Refinancing Deal","https://skift.com/2021/09/15/carlson-family-gives-up-control-of-namesake-agency-cwt-in-refinancing-deal/"],
+"tcb-fridays":["Twin Cities Business","Carlson Sells $2.7B TGI Fridays Chain","https://tcbmag.com/carlson-sells-2-7b-tgi-fridays-chain/"],
+"bloomberg-hna":["Bloomberg","Radisson Hotel Owner to Be Sold to China's HNA Tourism Group","https://www.bloomberg.com/news/articles/2016-04-27/radisson-hotel-owner-to-be-sold-to-china-s-hna-tourism-group"],
+"hnn-hna":["CoStar / Hotel News Now","HNA Closes on Carlson, Buys Majority of Rezidor","https://www.costar.com/article/1092939433/hna-closes-on-carlson-buys-majority-of-rezidor"],
+"inc-carlson":["Inc.","The Surprising Principle That Has Guided This Family Business for 80 Years","https://www.inc.com/christine-lagorio-chafkin/carlson-family-business-gold-bond-stamps.html"],
+"wiki-bakken":["Wikipedia","Earl Bakken","https://en.wikipedia.org/wiki/Earl_Bakken"],
+"ap-schwan":["美联社 / FOX 9","Schwan's Co. sold to South Korean company for $1.8 billion","https://www.fox9.com/news/schwans-co-sold-to-south-korean-company-for-18-billion"],
+"preparedfoods-schwan":["Prepared Foods","Schwan's Company sells majority stake to CJ CheilJedang","https://preparedfoods.com/articles/121747-schwans-company-sells-majority-stake-to-cj-cheiljedang"],
+"siouxfalls-schwan":["SiouxFalls.Business","South Korean company buys Schwan's in $1.8 billion deal","https://siouxfalls.business/?p=33857"],
+"strib-ghr":["Star Tribune","A Minnesota couple's love story leads to a philanthropic legacy","https://www.startribune.com/a-minnesota-couple-s-love-story-leads-to-a-philanthropic-legacy/455918083"],
+"tcb-opus":["Twin Cities Business","2024 Minnesota Family Business Awards: The Opus Group","https://tcbmag.com/honors/2024-minnesota-family-business-awards-the-opus-group/"],
+"opus-award":["Opus Group","Opus Receives Minnesota Family Business Award","https://www.opus-group.com/News/Opus-Receives-Minnesota-Family-Business-Award"],
+"forbes-pohlad":["Forbes","Pohlad family profile","https://www.forbes.com/profile/pohlad/"],
+"wiki-carlpohlad":["Wikipedia","Carl Pohlad","https://en.wikipedia.org/wiki/Carl_Pohlad"],
+"mlb-pohlad-explore":["MLB.com","Pohlad Family announces intent to explore selling the Minnesota Twins（2024-10-10）","https://www.mlb.com/press-release/press-release-pohlad-family-announces-intent-to-explore-selling-the-minnesota-twins"],
+"mlb-pohlad-retain":["MLB.com","Pohlad family to retain Twins ownership（2025-08-13）","https://www.mlb.com/news/pohlad-family-to-remain-principal-owner-of-twins"],
+"cbs-pohlad":["CBS Minnesota","Pohlad family says it will keep Minnesota Twins after exploring sale options","https://www.cbsnews.com/minnesota/news/pohlad-family-keeping-minnesota-twins"],
+"wiki-bestbuy":["Wikipedia","Best Buy","https://en.wikipedia.org/wiki/Best_Buy"],
+"strib-bby-timeline":["Star Tribune","A Best Buy timeline","https://www.startribune.com/a-best-buy-timeline/179815861"],
+"wiki-schulze":["Wikipedia","Richard M. Schulze","https://en.wikipedia.org/wiki/Richard_M._Schulze"],
+"discoverthecities":["Discover The Cities","The 7 Richest People & Richest Families in Minnesota","https://discoverthecities.com/richest-people-families-minnesota/"],
+"wiki-fastenal":["Wikipedia","Fastenal","https://en.wikipedia.org/wiki/Fastenal"],
+"wiki-kierlin":["Wikipedia","Bob Kierlin","https://en.wikipedia.org/wiki/Bob_Kierlin"],
+"strib-kierlin":["Star Tribune","Fastenal founder, Winona philanthropist Bob Kierlin dies（2025-02）","https://www.startribune.com/fastenal-founder-winona-philanthropist-bob-kierlin-dies/601221116"],
+"bmtn-kierlin":["Bring Me The News","Fastenal founder Bob Kierlin dies at age 85","https://bringmethenews.com/minnesota-business/fastenal-founder-winona-philanthropist-bob-kierlin-dies-at-age-85"],
+"winonapost":["Winona Post","Benefactor, Fastenal founder Bob Kierlin dies","https://www.winonapost.com/news/benefactor-fastenal-founder-bob-kierlin-dies/article_183a34b6-e8cf-11ef-8aa0-339d1fa8f734.html"],
+"strib-opperman":["Star Tribune","Dwight Opperman, former CEO of West Publishing Co., has died","https://www.startribune.com/dwight-opperman-former-ceo-of-west-publishing-co-has-died/211438321"],
+"strib-opperman2":["Star Tribune","Former West Publishing CEO Dwight Opperman dies at 89","https://www.startribune.com/former-west-publishing-ceo-dwight-opperman-dies-at-89/211501181"],
+"mnopedia-west":["MNopedia","West Publishing Company","https://www.mnhs.org/mnopedia/search/index/group/west-publishing-company"],
+"wiki-opperman":["Wikipedia","Dwight D. Opperman","https://en.wikipedia.org/wiki/Dwight_D._Opperman"],
+"infodocket":["Library Journal infoDOCKET","Westlaw's Founder Dwight Opperman Has Died","https://www.infodocket.com/2013/06/17/westlaws-founder-dwight-opperman-has-died/"],
+"ap-twolves":["美联社","Glen Taylor announces that Timberwolves are no longer for sale（2024-03）","https://www.clickondetroit.com/sports/2024/03/28/glen-taylor-announces-that-timberwolves-are-no-longer-for-sale/"],
+"moneyinc":["Money Inc","The 10 Richest People in Minnesota","https://moneyinc.com/richest-people-minnesota/"],
+"kroc-forbes":["KROC / Forbes 转载","2025 Forbes World Billionaire List: Minnesota","https://kroc.com/ixp/719/p/forbes-world-billionaire-list-minnesota/"],
+"wiki-taylor":["Wikipedia","Glen Taylor","https://en.wikipedia.org/wiki/Glen_Taylor"],
+"strib-gilded":["Star Tribune","What were Minneapolis and St. Paul like in the Gilded Age?","https://www.startribune.com/gilded-age-minneapolis-st-paul-james-j-hill/601367182"],
+"mnhs-hillhouse":["明尼苏达历史学会","James J. Hill House","https://www.mnhs.org/hillhouse"],
+"cbs-mnbillionaires":["CBS Minnesota","Good Question: Who Are Minnesota's Billionaires?","https://www.cbsnews.com/minnesota/news/good-question-who-are-minnesotas-billionaires/"],
+"stacker":["Stacker","Richest billionaires in Minnesota","https://stacker.com/stories/minnesota/richest-billionaires-minnesota"],
+"forbes-families":["Forbes","America's Richest Families（榜单方法说明）","https://www.forbes.com/lists/families/"],
+"forbes-keinath":["Wikipedia","Pauline MacMillan Keinath","https://en.wikipedia.org/wiki/Pauline_MacMillan_Keinath"]
+};
+
+
+const Y0=1850,Y1=2032,SPAN=Y1-Y0;
+const p=y=>((y-Y0)/SPAN*100);
+const STN={hold:"家族仍控制企业",ceded:"控制权已让出",gone:"家族已出局或企业解体"};
+const rowsEl=document.getElementById('rows'),axEl=document.getElementById('axis'),
+      detEl=document.getElementById('detail'),missEl=document.getElementById('miss'),
+      geoEl=document.getElementById('geobody'),srcEl=document.getElementById('srclist'),
+      stripEl=document.getElementById('strip'),
+      chartEl=document.getElementById('chart'),plotEl=document.getElementById('plot'),
+      crossEl=document.getElementById('cross'),crossYrEl=document.getElementById('crossyr'),
+      tipEl=document.getElementById('tip'),histEl=document.getElementById('hist'),
+      crisisEl=document.getElementById('crisisrow'),decEl=document.getElementById('decnote');
+
+const CRISIS=[
+ [1873,"1873 年恐慌","铁路投机破裂引发的长期萧条。此时明尼阿波利斯的磨坊业刚起步——Pillsbury 1872 年日产已达 2000 桶，萧条反而清掉了竞争者。"],
+ [1893,"1893 年恐慌","全国大量企业与铁路倒闭。希尔的大北方是少数挺过来的铁路之一；同年 Westminster 长老会教堂被焚，George Dayton 买下隔壁空地，九年后 Dayton 百货由此诞生。"],
+ [1929,"1929 年大崩盘","Dayton 在股灾前夕收购了珠宝商 J.B. Hudson，珠宝业务整个大萧条期间亏损，百货业务撑了过来。Marvin 在同期坚持不裁员，Carl Pohlad 则在此时送洗衣起家。"],
+ [1941,"二战","战时管制与复员。Bill Marvin 1945 年主张转向门窗制造，理由是要给返乡退伍军人留下工作。"],
+ [1973,"1973 年石油危机","此后五十一年，本表上再没有出现一家新创办的家族企业。"],
+ [2008,"2008 年金融危机","Fastenal 同年进入标普 500。"],
+ [2020,"新冠疫情","商旅崩塌；Carlson 家族次年在 CWT 破产重组中股权归零，退出了自己起家的行业。"]
+];
+let decade=null;
+
+function clusters(miles){
+  const g=[];
+  miles.forEach((m,i)=>{
+    const last=g[g.length-1];
+    if(last&&m[0]-last.year<=3){last.items.push([m[0],m[1],i]);}
+    else g.push({year:m[0],items:[[m[0],m[1],i]]});
+  });
+  return g;
+}
+
+[1865,1900,1925,1950,1975,2000,2026].forEach(y=>{
+  const b=document.createElement('b');b.textContent=y;b.style.left=p(y)+'%';axEl.appendChild(b);
+  const u=document.createElement('u');u.style.left=p(y)+'%';axEl.appendChild(u);
+});
+
+let cur='cargill';
+
+function buildHist(){
+  const cnt={};D.forEach(d=>{const k=Math.floor(d.start/10)*10;(cnt[k]=cnt[k]||[]).push(d);});
+  const decs=[];for(let y=1860;y<=2020;y+=10)decs.push(y);
+  const max=Math.max(...decs.map(y=>(cnt[y]||[]).length));
+  decs.forEach(y=>{
+    const fams=cnt[y]||[],n=fams.length;
+    const b=document.createElement('button');
+    b.type='button';b.className='hbar'+(n?'':' zero');
+    b.style.left=p(y)+'%';b.style.width=(p(y+10)-p(y))+'%';
+    b.style.height=n?(8+(n/max)*34)+'px':'2px';
+    b.dataset.dec=y;
+    b.setAttribute('aria-label',y+' 年代创办 '+n+' 家');
+    if(n)b.innerHTML='<b>'+n+'</b>';
+    if(n){
+      b.addEventListener('click',()=>{decade=(decade===y?null:y);render();syncHist();});
+      b.addEventListener('mouseenter',()=>placeTip(b,'<span class="who">'+y+' 年代</span><p><em>'+n+' 家</em>'
+        +fams.map(f=>f.cn+'（'+f.start+'）').join('、')+'</p>'));
+      b.addEventListener('mouseleave',hideTip);
+    }else{
+      b.addEventListener('mouseenter',()=>placeTip(b,'<span class="who">'+y+' 年代</span><p class="note">本表上没有这十年创办的家族企业。</p>'));
+      b.addEventListener('mouseleave',hideTip);
+      b.style.pointerEvents='auto';
+    }
+    histEl.appendChild(b);
+  });
+  CRISIS.forEach((c,i)=>{
+    const m=document.createElement('button');
+    m.type='button';m.className='cmark r'+(i%2);
+    m.style.left=p(c[0])+'%';m.textContent=c[1];
+    m.addEventListener('mouseenter',()=>placeTip(m,'<span class="who">全国性经济冲击</span><p><em>'+c[0]+'</em>'+c[2]+'</p>'));
+    m.addEventListener('focus',()=>placeTip(m,'<span class="who">全国性经济冲击</span><p><em>'+c[0]+'</em>'+c[2]+'</p>'));
+    m.addEventListener('mouseleave',hideTip);
+    m.addEventListener('blur',hideTip);
+    crisisEl.appendChild(m);
+    const l=document.createElement('span');
+    l.className='cl';l.style.left=p(c[0])+'%';plotEl.appendChild(l);
+  });
+}
+function syncHist(){
+  histEl.querySelectorAll('.hbar').forEach(b=>b.classList.toggle('on',+b.dataset.dec===decade));
+  if(decade===null){decEl.hidden=true;decEl.textContent='';}
+  else{
+    const n=D.filter(d=>Math.floor(d.start/10)*10===decade).length;
+    decEl.hidden=false;
+    decEl.innerHTML='只看 '+decade+' 年代创办的 '+n+' 家<button type="button" id="clrdec">清除</button>';
+    document.getElementById('clrdec').addEventListener('click',()=>{decade=null;render();syncHist();});
+  }
+}
+
+function render(){
+  const sort=document.getElementById('sort').value,filt=document.getElementById('filter').value;
+  const ord={hold:0,ceded:1,gone:2};
+  let list=[...D];
+  if(sort==='year')list.sort((a,b)=>a.start-b.start);
+  if(sort==='status')list.sort((a,b)=>ord[a.st]-ord[b.st]||a.start-b.start);
+  if(sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+  rowsEl.innerHTML='';
+  list.forEach(d=>{
+    let dim=false;
+    if(filt==='video')dim=!d.inVideo;
+    else if(filt==='missing')dim=d.inVideo;
+    else if(filt==='partial')dim=d.geo!=='partial';
+    else if(filt!=='all')dim=d.st!==filt;
+    if(decade!==null&&Math.floor(d.start/10)*10!==decade)dim=true;
+    const li=document.createElement('li');
+    li.className='row'+(d.id===cur?' on':'')+(dim?' dim':'');
+    const dots=clusters(d.miles).map((g,gi)=>
+      '<button type="button" class="hit" style="left:'+p(g.year)+'%" data-fam="'+d.id+'" data-g="'+gi+'" '
+      +'aria-label="'+g.year+' 年，'+d.cn+'，共 '+g.items.length+' 条事件">'
+      +'<span class="dot'+(g.items.length>1?' multi':'')+'"></span></button>').join('');
+    const tail=d.end>d.ctrlEnd?'<span class="tail" style="left:'+p(d.ctrlEnd)+'%;width:'+(p(d.end)-p(d.ctrlEnd))+'%"></span>':'';
+    const p0=Math.min(...d.miles.map(m=>m[0]));
+    const pre=p0<d.start?'<span class="pre" style="left:'+p(p0)+'%;width:'+(p(d.start)-p(p0))+'%"></span>':'';
+    const gd=d.geo==='partial'
+      ?'<button type="button" class="geobtn" data-geo="'+d.id+'" aria-label="'+d.cn+'：地理归属说明"><span class="geo"></span></button>'
+      :'';
+    li.innerHTML='<span class="name" role="button" tabindex="0" aria-label="'+d.cn+'，'+d.start+' 年起">'
+      +'<strong>'+d.cn+gd+'</strong><small>'+d.name+' · '+d.start+'</small></span>'
+      +'<span class="track">'+pre+tail
+      +'<span class="band '+d.st+'" style="left:'+p(d.start)+'%;width:'+(p(d.ctrlEnd)-p(d.start))+'%"></span>'
+      +dots+'</span>';
+    const pick=()=>{cur=d.id;buildHist();
+plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';
+render();paint();syncHist();
+window.addEventListener('resize',()=>{plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';});detEl.scrollIntoView({behavior:'smooth',block:'nearest'});};
+    li.addEventListener('click',e=>{if(!e.target.closest('.hit')&&!e.target.closest('.geobtn'))pick();});
+    const gb=li.querySelector('.geobtn');
+    if(gb){
+      gb.addEventListener('mouseenter',()=>showGeo(gb,d));
+      gb.addEventListener('focus',()=>showGeo(gb,d));
+      gb.addEventListener('mouseleave',hideTip);
+      gb.addEventListener('blur',hideTip);
+      gb.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();showGeo(gb,d);});
+    }
+    li.querySelector('.name').addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
+    li.querySelectorAll('.hit').forEach(h=>{
+      const g=clusters(d.miles)[+h.dataset.g];
+      h.addEventListener('mouseenter',()=>showTip(h,d,g));
+      h.addEventListener('focus',()=>showTip(h,d,g));
+      h.addEventListener('mouseleave',hideTip);
+      h.addEventListener('blur',hideTip);
+      h.addEventListener('click',e=>{
+        e.stopPropagation();e.preventDefault();
+        if(cur!==d.id){cur=d.id;buildHist();
+plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';
+render();paint();syncHist();
+window.addEventListener('resize',()=>{plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';});}
+        showTip(document.querySelector('.hit[data-fam="'+d.id+'"][data-g="'+h.dataset.g+'"]')||h,d,g);
+        markMiles(g.items.map(it=>it[2]),true);
+        const first=detEl.querySelector('.mile li[data-i="'+g.items[0][2]+'"]');
+        if(first)first.scrollIntoView({behavior:'smooth',block:'nearest'});
+      });
+    });
+    rowsEl.appendChild(li);
+  });
+  stripEl.innerHTML='';
+  list.forEach(d=>{
+    const b=document.createElement('button');
+    b.type='button';b.className='card'+(d.id===cur?' on':'');
+    b.setAttribute('role','tab');b.setAttribute('aria-selected',d.id===cur);
+    b.innerHTML='<span class="c-yr">'+d.start+'</span>'
+      +'<span class="c-cn">'+d.cn+'</span>'
+      +'<span class="c-en">'+d.name+'</span>'
+      +'<span class="c-st s-'+d.st+'">'+STN[d.st]+'</span>'
+      +'<span class="c-tag">'+d.tag+'</span>'
+      +'<span class="c-num"><b>'+d.stats[0][0]+'</b> · '+d.stats[0][1]+'</span>';
+    b.addEventListener('click',()=>{cur=d.id;buildHist();
+plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';
+render();paint();syncHist();
+window.addEventListener('resize',()=>{plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';});
+      detEl.scrollIntoView({behavior:'smooth',block:'start'});});
+    stripEl.appendChild(b);
+  });
+  const act=stripEl.querySelector('.card.on');
+  if(act)act.scrollIntoView({behavior:'smooth',block:'nearest',inline:'nearest'});
+}
+
+function markMiles(idxs,on){
+  detEl.querySelectorAll('.mile li').forEach(li=>li.classList.remove('hl'));
+  if(on)idxs.forEach(i=>{const li=detEl.querySelector('.mile li[data-i="'+i+'"]');if(li)li.classList.add('hl');});
+}
+function markDots(fam,gi,on){
+  document.querySelectorAll('.hit .dot').forEach(x=>x.classList.remove('hl'));
+  if(on){const h=document.querySelector('.hit[data-fam="'+fam+'"][data-g="'+gi+'"]');
+    if(h)h.querySelector('.dot').classList.add('hl');}
+}
+function placeTip(el,html){
+  tipEl.innerHTML=html+'<span class="arw"></span>';
+  tipEl.classList.add('on');
+  const r=el.getBoundingClientRect(),c=chartEl.getBoundingClientRect();
+  const x=r.left-c.left+r.width/2, w=tipEl.offsetWidth;
+  const L=Math.max(8,Math.min(x-w/2,c.width-w-8));
+  tipEl.style.left=L+'px';
+  tipEl.style.top=(r.top-c.top-2)+'px';
+  tipEl.querySelector('.arw').style.left=(x-L)+'px';
+}
+function showTip(hit,d,g){
+  placeTip(hit,'<span class="who">'+d.cn+'</span>'
+    +g.items.map(it=>'<p><em>'+it[0]+'</em>'+it[1]+'</p>').join(''));
+  if(d.id===cur)markMiles(g.items.map(it=>it[2]),true);
+}
+function showGeo(btn,d){
+  placeTip(btn,'<span class="who">地理归属存疑</span><p>'+d.origin+'</p>'
+    +'<p class="note">带琥珀点的六家，或公司创办于外州，或创办人只是把明州当作居住地，或当事人早已迁出。详见下方“这些家族全都来自明尼苏达吗”一节。</p>');
+}
+function hideTip(){tipEl.classList.remove('on');markMiles([],false);}
+
+function refList(keys){
+  return keys.map(k=>{const s=S[k];return s?'<li><a href="'+s[2]+'" target="_blank" rel="noopener">'+s[1]+'</a> <span class="outlet">— '+s[0]+'</span></li>':'';}).join('');
+}
+
+function paint(){
+  const d=D.find(x=>x.id===cur);
+  detEl.innerHTML=
+    '<div class="head"><h2>'+d.cn+'</h2>'
+    +'<span class="status s-'+d.st+'">'+STN[d.st]+'</span>'
+    +'<span class="tagline">'+d.name+' · '+d.tag+'</span></div>'
+    +'<p class="where">地理归属：'+d.origin+'</p>'
+    +'<p class="summary">'+d.sum+'</p>'
+    +'<dl class="stats">'+d.stats.map(s=>'<div class="stat"><dt>'+s[1]+'</dt><dd>'+s[0]+'<s>'+s[2]+'</s></dd></div>').join('')+'</dl>'
+    +'<div class="cols"><div><h3>规模与事件时间线</h3><ul class="mile">'
+    +d.miles.map((m,i)=>'<li data-i="'+i+'"><em>'+m[0]+'</em><span>'+m[1]+'</span></li>').join('')
+    +'</ul></div><div><h3>关键人物</h3><ul class="folk">'
+    +d.folk.map(f=>'<li><b>'+f[0]+'</b><span>'+f[1]+'</span></li>').join('')
+    +'</ul></div></div>'
+    +'<p class="caveat">'+d.caveat+'</p>'
+    +'<div class="refs"><h3>本条目的来源</h3><ol>'+refList(d.srcs)+'</ol></div>';
+  const gs=clusters(d.miles);
+  detEl.querySelectorAll('.mile li').forEach(li=>{
+    const i=+li.dataset.i, gi=gs.findIndex(g=>g.items.some(it=>it[2]===i));
+    li.addEventListener('mouseenter',()=>{li.classList.add('hl');markDots(d.id,gi,true);});
+    li.addEventListener('mouseleave',()=>{li.classList.remove('hl');markDots(d.id,gi,false);});
+  });
+}
+
+missEl.innerHTML=D.filter(d=>!d.inVideo).map(d=>
+  '<li><b>'+d.cn+'</b><em>'+d.start+'</em><p>'+d.tag+'。'+d.sum.split('。')[0]+'。</p></li>').join('');
+
+geoEl.innerHTML=D.filter(d=>d.geo==='partial').map(d=>
+  '<tr><td>'+d.cn+'</td><td>'+d.origin+'</td></tr>').join('');
+
+const seen=[];D.forEach(d=>d.srcs.forEach(k=>{if(!seen.includes(k))seen.push(k);}));
+['strib-gilded','mnhs-hillhouse','cbs-mnbillionaires','stacker','forbes-families','forbes-keinath']
+  .forEach(k=>{if(!seen.includes(k))seen.push(k);});
+srcEl.innerHTML=seen.map(k=>{const s=S[k];return s?
+  '<li><a href="'+s[2]+'" target="_blank" rel="noopener">'+s[1]+'</a><span class="outlet">'+s[0]+'</span></li>':'';}).join('');
+
+chartEl.addEventListener('mousemove',e=>{
+  const pr=plotEl.getBoundingClientRect();
+  const x=e.clientX-pr.left;
+  if(x<0||x>pr.width){crossEl.classList.remove('on');crossYrEl.classList.remove('on');return;}
+  crossEl.style.left=x+'px';crossEl.classList.add('on');
+  const yr=Math.round(Y0+(x/pr.width)*SPAN);
+  crossYrEl.textContent=yr;
+  const cr=chartEl.getBoundingClientRect();
+  crossYrEl.style.left=(e.clientX-cr.left)+'px';
+  crossYrEl.classList.add('on');
+});
+chartEl.addEventListener('mouseleave',()=>{
+  crossEl.classList.remove('on');crossYrEl.classList.remove('on');hideTip();});
+document.addEventListener('click',e=>{if(!e.target.closest('.hit')&&!e.target.closest('.geobtn'))hideTip();});
+window.addEventListener('scroll',hideTip,{passive:true});
+
+document.getElementById('sort').addEventListener('change',render);
+document.getElementById('filter').addEventListener('change',render);
+buildHist();
+plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';
+render();paint();syncHist();
+window.addEventListener('resize',()=>{plotEl.style.top=(axEl.offsetTop-chartEl.offsetTop)+'px';});
+</script>
+</body>
+</html>
